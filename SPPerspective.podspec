@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   
   s.author        = { "Ivan Vorobei" => "varabeis@icloud.com" }
   
-  s.swift_version = 5.1
+  s.swift_version = ['5.1']
   s.ios.deployment_target = "12.0"
 
   s.source = { :git => 'https://github.com/ivanvorobei/SPPerspective.git', :tag => s.version }
