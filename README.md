@@ -4,7 +4,7 @@
 
 ### About
 
-Animatable 3D Transform for views. Very similar to iOS 14 widgets. For using need call 1 line of code.  Also you can config values as you need. 
+Animatable 3D Transform for views. Very similar to iOS 14 widgets. Also you can config values as you need. 
 
 It first release, and if you have any troubles, please, create issue or contact with me via email: varabeis@icloud.com
 
