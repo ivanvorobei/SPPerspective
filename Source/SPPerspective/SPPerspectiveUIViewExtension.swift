@@ -31,7 +31,7 @@ public extension UIView {
         switch style {
         case .iOS14Widget:
             let config = SPPerspectiveAnimationConfig(
-                animationDuration: 2,
+                animationDuration: 16,
                 distortionPerspective: 600,
                 angle: 10,
                 vectorStep: 3.14,
