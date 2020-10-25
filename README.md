@@ -1,6 +1,6 @@
 # SPPerspective
 
-<img align="left" src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Preview%20-%201.0.png" width="480"/>
+<img align="left" src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Preview%20-%201.0.png" width="450"/>
 
 ### About
 
