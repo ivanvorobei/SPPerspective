@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'SPPerspective'
-  s.version = '1.0.2'
+  s.version = '1.0.4'
   s.summary = 'Animatable 3D Transform for views like iOS 14 widgets.'
   s.homepage = 'https://github.com/ivanvorobei/SPPerspective'
   s.license = { :type => "MIT", :file => "LICENSE" }
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '6.0'
 
   s.source = { :git => 'https://github.com/ivanvorobei/SPPerspective.git', :tag => s.version }
-  s.source_files = 'Sources/SPPerspective/**/*.swift'
+  s.source_files = 'Source/SPPerspective/**/*.swift'
 
 end
