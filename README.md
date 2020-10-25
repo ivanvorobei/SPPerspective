@@ -1,6 +1,6 @@
 # SPPerspective
 
-<img align="left" src="https://github.com/ivanvorobei/SPPermissions/blob/master/Assets/Readme/Preview - 1.0.png" width="520"/>
+<img align="left" src="https://github.com/ivanvorobei/SPPerspective/blob/master/Assets/Readme/Preview - 1.0.png" width="520"/>
 
 Animatable 3D Transform for views. Very similar to iOS 14 widgets. Also you can config values as you need.
 
@@ -31,7 +31,7 @@ Swift `+5.0`. Ready for use on iOS 12+
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-To integrate `SparrowKit` into your Xcode project using Xcode 12, specify it in `File > Swift Packages > Add Package Dependency...`:
+To integrate `SPPerspective` into your Xcode project using Xcode 12, specify it in `File > Swift Packages > Add Package Dependency...`:
 
 ```ogdl
 https://github.com/ivanvorobei/SPPerspective
