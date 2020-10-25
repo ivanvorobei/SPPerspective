@@ -4,8 +4,8 @@
 
 ### About
 
-Animatable 3D Transform for views. Very similar to iOS 14 widgets. Also you can config values as you need. 
-It first release, and if you have any troubles, please, create issue or contact with me via email: varabeis@icloud.com
+Animatable 3D Transform for views. Very similar to iOS 14 widgets. Also you can config values as you need. [Video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov).
+It first release, and if you have any troubles, please, create issue.
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
