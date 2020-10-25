@@ -1,18 +1,20 @@
 Pod::Spec.new do |s|
 
-  s.name          = "SPPerspective"
-  s.version       = "1.0.0"
-  s.summary       = "Animatable 3D Transform for views. Very similar to iOS 14 widgets."
-  s.homepage      = "https://github.com/IvanVorobei/SPPerspective"
-  s.source        = { :git => "https://github.com/IvanVorobei/SPPerspective.git", :tag => s.version }
-  s.license       = { :type => "MIT", :file => "LICENSE" }
+  s.name = 'SPPerspective'
+  s.version = '1.0.2'
+  s.summary = 'Animatable 3D Transform for views like iOS 14 widgets.'
+  s.homepage = 'https://github.com/ivanvorobei/SPPerspective'
+  s.license = { :type => "MIT", :file => "LICENSE" }
   
-  s.author        = { "Ivan Vorobei" => "varabeis@icloud.com" }
+  s.author = { "Ivan Vorobei" => "varabeis@icloud.com" }
+  s.social_media_url = 'https://ivanvorobei.by/'
   
-  s.swift_version = ['5.1']
-  s.ios.deployment_target = "12.0"
+  s.swift_version = '5.1'
+  s.ios.deployment_target = '12.0'
+  s.tvos.deployment_target = '12.0'
+  s.watchos.deployment_target = '6.0'
 
   s.source = { :git => 'https://github.com/ivanvorobei/SPPerspective.git', :tag => s.version }
-  s.source_files  = "Source/SPPerspective/**/*.swift"
+  s.source_files = 'Sources/SPPerspective/**/*.swift'
 
 end
