@@ -1,10 +1,11 @@
 # SPPerspective
 
-<img align="left" src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Preview%20-%201.0.png" width="520"/>
+<img align="left" src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Preview%20-%201.0.png" width="500"/>
 
 ### About
 
 Animatable 3D Transform for views. Very similar to iOS 14 widgets. For using need call 1 line of code.  Also you can config values as you need. 
+
 It first release, and if you have any troubles, please, create issue or contact with me via email: varabeis@icloud.com
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
