@@ -1,6 +1,6 @@
 # SPPerspective
 
-<img align="left" src="https://github.com/ivanvorobei/SPPerspective/blob/master/Assets/Readme/Preview - 1.0.png" width="520"/>
+<img align="left" src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Preview%20-%201.0.png" width="520"/>
 
 Animatable 3D Transform for views. Very similar to iOS 14 widgets. Also you can config values as you need.
 
