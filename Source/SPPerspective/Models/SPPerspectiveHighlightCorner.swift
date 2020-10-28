@@ -22,53 +22,46 @@
 
 import UIKit
 
-public struct SPPerspectiveShadowConfig {
+/**
+Highlight some side or corner.
+ */
+public enum SPPerspectiveHighlightCorner: CaseIterable {
+    
+    case topLeft
+    case topMedium
+    case topRight
+    
+    case mediumLeft
+    case mediumRight
+    
+    case bottomLeft
+    case bottomMedium
+    case bottomRight
     
     /**
-     Blur radius of shadow.
+     Get random side or corner.
      */
-    var blurRadius: CGFloat
+    static var random: SPPerspectiveHighlightCorner {
+        return allCases.randomElement()!
+    }
     
     /**
-     Shadow opacity.
+     Ordered by clockwise.
      */
-    var opacity: CGFloat
+    static var clockwise: [SPPerspectiveHighlightCorner] {
+        return [.topMedium, .topRight, .mediumRight, .bottomRight, .bottomMedium, .bottomLeft, .mediumLeft, .topLeft]
+    }
     
     /**
-     Color of shadow.
+     Ordered by clockwise with start specific side or corner.
      */
-    var color: UIColor
-    
-    /**
-     Shadow is dynamic.
-     This property configure most horizontal offset.
-     */
-    var maximumHorizontalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     Initial vertical offset.
-     */
-    var startVerticalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     Side vertical offset.
-     
-     For best shoud use smaller value of `maximumHorizontalOffset`.
-     */
-    var cornerVerticalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     This property configure most vertical offset when card up down side.
-     */
-    var maximumVerticalOffset: CGFloat
-    
-    /**
-     Calculation medium between start and mediun of vertical offset.
-     */
-    var startCornerVerticalMedian: CGFloat {
-        return cornerVerticalOffset - (cornerVerticalOffset - startVerticalOffset) / 2
+    static func clockwise(from corner: SPPerspectiveHighlightCorner) -> [SPPerspectiveHighlightCorner] {
+        var clockwise = self.clockwise
+        if let splitIndex = clockwise.firstIndex(of: corner) {
+            let prefix = clockwise.prefix(upTo: splitIndex)
+            clockwise.removeFirst(prefix.count)
+            clockwise = clockwise + prefix
+        }
+        return clockwise
     }
 }

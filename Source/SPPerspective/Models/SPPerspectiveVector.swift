@@ -22,53 +22,12 @@
 
 import UIKit
 
-public struct SPPerspectiveShadowConfig {
+/**
+ Represent vector for 3D coordinates.
+ */
+public struct SPPerspectiveVector {
     
-    /**
-     Blur radius of shadow.
-     */
-    var blurRadius: CGFloat
-    
-    /**
-     Shadow opacity.
-     */
-    var opacity: CGFloat
-    
-    /**
-     Color of shadow.
-     */
-    var color: UIColor
-    
-    /**
-     Shadow is dynamic.
-     This property configure most horizontal offset.
-     */
-    var maximumHorizontalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     Initial vertical offset.
-     */
-    var startVerticalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     Side vertical offset.
-     
-     For best shoud use smaller value of `maximumHorizontalOffset`.
-     */
-    var cornerVerticalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     This property configure most vertical offset when card up down side.
-     */
-    var maximumVerticalOffset: CGFloat
-    
-    /**
-     Calculation medium between start and mediun of vertical offset.
-     */
-    var startCornerVerticalMedian: CGFloat {
-        return cornerVerticalOffset - (cornerVerticalOffset - startVerticalOffset) / 2
-    }
+    var x: CGFloat
+    var y: CGFloat
+    var z: CGFloat
 }

@@ -22,53 +22,21 @@
 
 import UIKit
 
-public struct SPPerspectiveShadowConfig {
+public class SPPerspectiveStaticConfig: SPPerspectiveConfig {
     
     /**
-     Blur radius of shadow.
+     Corner which higlight with launch.
+     By default random.
      */
-    var blurRadius: CGFloat
+    var corner: SPPerspectiveHighlightCorner = .random
     
-    /**
-     Shadow opacity.
-     */
-    var opacity: CGFloat
-    
-    /**
-     Color of shadow.
-     */
-    var color: UIColor
-    
-    /**
-     Shadow is dynamic.
-     This property configure most horizontal offset.
-     */
-    var maximumHorizontalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     Initial vertical offset.
-     */
-    var startVerticalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     Side vertical offset.
-     
-     For best shoud use smaller value of `maximumHorizontalOffset`.
-     */
-    var cornerVerticalOffset: CGFloat
-    
-    /**
-     Shadow is dynamic.
-     This property configure most vertical offset when card up down side.
-     */
-    var maximumVerticalOffset: CGFloat
-    
-    /**
-     Calculation medium between start and mediun of vertical offset.
-     */
-    var startCornerVerticalMedian: CGFloat {
-        return cornerVerticalOffset - (cornerVerticalOffset - startVerticalOffset) / 2
+    init(corner: SPPerspectiveHighlightCorner,
+         distortion: CGFloat,
+         angle: CGFloat,
+         vectorStep: CGFloat,
+         shadow: SPPerspectiveShadowConfig?) {
+        
+        self.corner = corner
+        super.init(distortion: distortion, angle: angle, vectorStep: vectorStep, shadow: shadow)
     }
 }

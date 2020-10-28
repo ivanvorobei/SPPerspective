@@ -22,8 +22,30 @@
 
 import UIKit
 
-public enum SPPerspectiveAnimation {
+public class SPPerspectiveAnimationConfig: SPPerspectiveConfig {
     
-    case iOS14Widget
-    case custom(SPPerspectiveAnimationConfig)
+    /**
+     Animation of full cycle of rotation.
+     
+     In widgets iOS 14 using 16 seconds for cycle.
+     If you use shadow with it animation,
+     shadow automatically apply also it duration.
+     */
+    var animationDuration: TimeInterval
+    
+    /**
+     Corner from start animation.
+     By default random.
+     */
+    var fromCorner: SPPerspectiveHighlightCorner = .random
+    
+    init(duration: TimeInterval,
+         distortion: CGFloat,
+         angle: CGFloat,
+         vectorStep: CGFloat,
+         shadow: SPPerspectiveShadowConfig?) {
+        
+        self.animationDuration = duration
+        super.init(distortion: distortion, angle: angle, vectorStep: vectorStep, shadow: shadow)
+    }
 }
