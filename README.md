@@ -52,10 +52,6 @@ pod 'SPPerspective'
 
 If you prefer not to use any of dependency managers, you can integrate `SPPerspective` into your project manually. Put `Source/SPPerspective` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
-### Manually
-
-If you prefer not to use any of dependency managers, you can integrate `SPPermissions` into your project manually. Put `Source/SPPerspective` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
-
 ## Usage
 
 ### Widget iOS 14
