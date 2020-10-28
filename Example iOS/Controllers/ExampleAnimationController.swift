@@ -34,7 +34,8 @@ class ExampleAnimationController: UIViewController {
         whiteView.backgroundColor = .systemBackground
         view.addSubview(whiteView)
         
-        whiteView.applyPerspectiveAnimation(.iOS14Widget)
+        // Animatable
+        whiteView.applyPerspective(.iOS14WidgetAnimatable)
     }
     
     override func viewDidLayoutSubviews() {

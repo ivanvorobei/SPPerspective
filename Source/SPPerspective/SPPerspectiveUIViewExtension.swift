@@ -25,33 +25,49 @@ import UIKit
 public extension UIView {
     
     /**
-     Apple perspective and start animation.
+     Apply perspective by config.
+     
+     - parameter config: Static or animatable config of perspective.
      */
-    func applyPerspectiveAnimation(_ style: SPPerspectiveAnimation) {
-        switch style {
-        case .iOS14Widget:
-            let config = SPPerspectiveAnimationConfig(
-                animationDuration: 16,
-                distortionPerspective: 600,
-                angle: 10,
-                vectorStep: 3.14,
-                shadowConfig: SPPerspectiveShadowConfig(
-                    blurRadius: 19,
-                    opacity: 0.25,
-                    color: UIColor.black,
-                    maximumHorizontalOffset: 14,
-                    startVerticalOffset: 8,
-                    cornerVerticalOffset: 20,
-                    maximumVerticalOffset: 24
-                )
-            )
-            applyPerspectiveConfig(config)
-        case .custom(let config):
-            applyPerspectiveConfig(config)
+    func applyPerspective(_ config: SPPerspectiveConfig) {
+        switch config {
+        case let animationConfig as SPPerspectiveAnimationConfig:
+            applyAnimationPerspective(with: animationConfig)
+        case let staticConfig as SPPerspectiveStaticConfig:
+            applyStaticPerspective(with: staticConfig)
+        default:
+            break
         }
     }
     
-    fileprivate func applyPerspectiveConfig(_ config: SPPerspectiveAnimationConfig) {
+    /**
+     Apply static perspective config.
+     
+     - parameter config: Static config of perspective.
+     */
+    fileprivate func applyStaticPerspective(with config: SPPerspectiveStaticConfig) {
+        
+        // Process 3D Animation
+        
+        let transform = makeTransform(corner: config.corner, distortion: config.distortionPerspective, angle: config.angle, step: config.vectorStep)
+        layer.transform = transform
+        
+        // Process shadow
+        
+        guard let shadowConfig = config.shadowConfig else { return }
+        let shadowOffset = makeShadowOffset(for: config.corner, config: shadowConfig)
+        layer.shadowOffset = shadowOffset
+        layer.shadowRadius = shadowConfig.blurRadius
+        layer.shadowOpacity = Float(shadowConfig.opacity)
+        layer.shadowColor = shadowConfig.color.cgColor
+    }
+    
+    /**
+     Apply animatable perspective config.
+     
+     - parameter config: Animation config of perspective.
+     */
+    fileprivate func applyAnimationPerspective(with config: SPPerspectiveAnimationConfig) {
         
         // Process 3D Animation
         
@@ -65,18 +81,10 @@ public extension UIView {
         let angle = config.angle
         let step = config.vectorStep
         
-        let transformValues = [
-            makeTransform(distortion: distortion, angle: angle, vectorX: step * 2, vectorY: 0, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: step, vectorY: step, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: 0, vectorY: step * 2, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: -step, vectorY: step, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: -step * 2, vectorY: 0, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: -step, vectorY: -step, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: 0, vectorY: -step * 2, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: step, vectorY: -step, vectorZ: 0),
-            makeTransform(distortion: distortion, angle: angle, vectorX: step * 2, vectorY: 0, vectorZ: 0)
-        ]
+        var cornersOrder = SPPerspectiveHighlightCorner.clockwise(from: config.fromCorner)
+        cornersOrder = cornersOrder + [cornersOrder.first!]
         
+        let transformValues = cornersOrder.map { makeTransform(corner: $0, distortion: distortion, angle: angle, step: step) }
         transformAnimation.values = transformValues
         
         let transformTimingStep = 1 / Double(transformValues.count - 1)
@@ -95,7 +103,7 @@ public extension UIView {
         
         layer.add(transformAnimation, forKey: "SPPerspective - Transform")
         
-        // Process shadow logic
+        // Process shadow
         
         guard let shadowConfig = config.shadowConfig else { return }
         layer.shadowRadius = shadowConfig.blurRadius
@@ -108,13 +116,7 @@ public extension UIView {
         shadowAnimation.fillMode = .forwards
         shadowAnimation.isRemovedOnCompletion = false
         
-        let shadowOffsetValues = [
-            CGSize(width: 0, height: shadowConfig.startVerticalOffset),
-            CGSize(width: shadowConfig.maximumHorizontalOffset, height: shadowConfig.cornerVerticalOffset),
-            CGSize(width: 0, height: shadowConfig.maximumVerticalOffset),
-            CGSize(width: -shadowConfig.maximumHorizontalOffset, height: shadowConfig.cornerVerticalOffset),
-            CGSize(width: 0, height: shadowConfig.startVerticalOffset)
-        ]
+        let shadowOffsetValues = cornersOrder.map { makeShadowOffset(for: $0, config: shadowConfig) }
         shadowAnimation.values = shadowOffsetValues
         
         let shadowTimingStep = 1 / Double(shadowOffsetValues.count - 1)
@@ -131,20 +133,88 @@ public extension UIView {
         }
         shadowAnimation.timingFunctions = shadowTimingFunctions
         
-        layer.add(shadowAnimation, forKey: "SPPerspectivShadow")
+        layer.add(shadowAnimation, forKey: "SPPerspective - Shadow")
+    }
+    
+    // MARK: - Makers
+    
+    /**
+     Create tranform by `corner`, distortion
+     angle in degres and vector values.
+     
+     - parameter corner: Highlight corner.
+     - parameter distortion: Distortion of perspective.
+     - parameter angle: Rotation in degress by vector.
+     - parameter step: Value of range between steps.
+     */
+    fileprivate func makeTransform(corner: SPPerspectiveHighlightCorner, distortion: CGFloat, angle: CGFloat, step: CGFloat) -> CATransform3D {
+        let vector = makeVector(for: corner, step: step)
+        return makeTransform(distortion: distortion, angle: angle, vector: vector)
     }
     
     /**
-     Create tranform buy distortion,
+     Create tranform by distortion,
      angle in degres and vector values.
+     
+     - parameter distortion: Distortion of perspective.
+     - parameter angle: Rotation in degress by vector.
+     - parameter vector: Vector of dicection for transform.
      */
-    fileprivate func makeTransform(distortion: CGFloat, angle: CGFloat, vectorX: CGFloat, vectorY: CGFloat, vectorZ: CGFloat) -> CATransform3D {
+    fileprivate func makeTransform(distortion: CGFloat, angle: CGFloat, vector: SPPerspectiveVector) -> CATransform3D {
         var rotationAndPerspectiveTransform : CATransform3D = CATransform3DIdentity
         rotationAndPerspectiveTransform.m34 = 1.0 / distortion
         rotationAndPerspectiveTransform = CATransform3DRotate(
             rotationAndPerspectiveTransform,
-            CGFloat(angle * .pi / 180), vectorX, vectorY, vectorZ
+            CGFloat(angle * .pi / 180), vector.x, vector.y, vector.z
         )
         return rotationAndPerspectiveTransform
+    }
+    
+    /**
+     Create vector for trnaform by `corner`.
+     Step is value of range between steps.
+     
+     - parameter corner: Highlight corner.
+     - parameter step: Value of range between steps.
+     */
+    fileprivate func makeVector(for corner: SPPerspectiveHighlightCorner, step: CGFloat) -> SPPerspectiveVector {
+        switch corner {
+        case .topMedium: return SPPerspectiveVector(x: step * 2, y: 0, z: 0)
+        case .topRight: return SPPerspectiveVector(x: step, y: step, z: 0)
+        case .mediumRight: return SPPerspectiveVector(x: 0, y: step * 2, z: 0)
+        case .bottomRight: return SPPerspectiveVector(x: -step, y: step, z: 0)
+        case .bottomMedium: return SPPerspectiveVector(x: -step * 2, y: 0, z: 0)
+        case .bottomLeft: return SPPerspectiveVector(x: -step, y: -step, z: 0)
+        case .mediumLeft: return SPPerspectiveVector(x: 0, y: -step * 2, z: 0)
+        case .topLeft: return SPPerspectiveVector(x: step, y: -step, z: 0)
+        }
+    }
+    
+    /**
+     Create offset shadow size for specific corner.
+     Config need for get trnslation values.
+     
+     - parameter corner: Highlight corner.
+     - parameter config: Shadow configuration.
+     */
+    fileprivate func makeShadowOffset(for corner: SPPerspectiveHighlightCorner, config: SPPerspectiveShadowConfig) -> CGSize {
+        switch corner {
+        case .topMedium:
+            return CGSize(width: 0, height: config.startVerticalOffset)
+        case .topRight:
+            return CGSize(width: config.maximumHorizontalOffset / 2, height: config.startCornerVerticalMedian)
+        case .mediumRight:
+            return CGSize(width: config.maximumHorizontalOffset, height: config.cornerVerticalOffset)
+        case .bottomRight:
+            return CGSize(width: config.maximumHorizontalOffset / 2, height: config.cornerVerticalOffset)
+        case .bottomMedium:
+            return CGSize(width: 0, height: config.maximumVerticalOffset)
+        case .bottomLeft:
+            return CGSize(width: -config.maximumHorizontalOffset / 2, height: config.cornerVerticalOffset)
+        case .mediumLeft:
+            return CGSize(width: -config.maximumHorizontalOffset, height: config.cornerVerticalOffset)
+        case .topLeft:
+            return CGSize(width: -config.maximumHorizontalOffset / 2, height: config.startCornerVerticalMedian)
+        }
     }
 }
