@@ -31,20 +31,20 @@ public class SPPerspectiveAnimationConfig: SPPerspectiveConfig {
      If you use shadow with it animation,
      shadow automatically apply also it duration.
      */
-    var animationDuration: TimeInterval
+    public var animationDuration: TimeInterval
     
     /**
      Corner from start animation.
      By default random.
      */
-    var fromCorner: SPPerspectiveHighlightCorner = .random
+    public var fromCorner: SPPerspectiveHighlightCorner = .random
     
     /**
      Direction of animation.
      */
-    var direction: SPPerspectiveAnimationDirection = .random
+    public var direction: SPPerspectiveAnimationDirection = .random
     
-    init(duration: TimeInterval,
+    public init(duration: TimeInterval,
          distortion: CGFloat,
          angle: CGFloat,
          vectorStep: CGFloat,

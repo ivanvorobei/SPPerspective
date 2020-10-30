@@ -27,29 +27,29 @@ public struct SPPerspectiveShadowConfig {
     /**
      Blur radius of shadow.
      */
-    var blurRadius: CGFloat
+    public var blurRadius: CGFloat
     
     /**
      Shadow opacity.
      */
-    var opacity: CGFloat
+    public var opacity: CGFloat
     
     /**
      Color of shadow.
      */
-    var color: UIColor
+    public var color: UIColor
     
     /**
      Shadow is dynamic.
      This property configure most horizontal offset.
      */
-    var maximumHorizontalOffset: CGFloat
+    public var maximumHorizontalOffset: CGFloat
     
     /**
      Shadow is dynamic.
      Initial vertical offset.
      */
-    var startVerticalOffset: CGFloat
+    public var startVerticalOffset: CGFloat
     
     /**
      Shadow is dynamic.
@@ -57,18 +57,18 @@ public struct SPPerspectiveShadowConfig {
      
      For best shoud use smaller value of `maximumHorizontalOffset`.
      */
-    var cornerVerticalOffset: CGFloat
+    public var cornerVerticalOffset: CGFloat
     
     /**
      Shadow is dynamic.
      This property configure most vertical offset when card up down side.
      */
-    var maximumVerticalOffset: CGFloat
+    public var maximumVerticalOffset: CGFloat
     
     /**
      Calculation medium between start and mediun of vertical offset.
      */
-    var startCornerVerticalMedian: CGFloat {
+    public var startCornerVerticalMedian: CGFloat {
         return cornerVerticalOffset - (cornerVerticalOffset - startVerticalOffset) / 2
     }
 }
