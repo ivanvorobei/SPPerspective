@@ -25,7 +25,7 @@ import UIKit
 /**
  Represent animation direction like clockwise or reversed.
  */
-enum SPPerspectiveAnimationDirection: CaseIterable {
+public enum SPPerspectiveAnimationDirection: CaseIterable {
     
     /**
      Using like clockwise.

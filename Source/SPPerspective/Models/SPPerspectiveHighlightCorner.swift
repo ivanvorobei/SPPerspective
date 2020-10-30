@@ -51,7 +51,7 @@ public enum SPPerspectiveHighlightCorner: CaseIterable {
      - parameter corner: Animation will start from its corner. If nil using default value.
      - parameter direction: Direction of animation.
      */
-    static func order(from corner: SPPerspectiveHighlightCorner?, direction: SPPerspectiveAnimationDirection) -> [SPPerspectiveHighlightCorner] {
+    public static func order(from corner: SPPerspectiveHighlightCorner?, direction: SPPerspectiveAnimationDirection) -> [SPPerspectiveHighlightCorner] {
         var order: [SPPerspectiveHighlightCorner] = [.topMedium, .topRight, .mediumRight, .bottomRight, .bottomMedium, .bottomLeft, .mediumLeft, .topLeft]
         
         if let fromCorner = corner {

@@ -27,7 +27,7 @@ import UIKit
  */
 public struct SPPerspectiveVector {
     
-    var x: CGFloat
-    var y: CGFloat
-    var z: CGFloat
+    public var x: CGFloat
+    public var y: CGFloat
+    public var z: CGFloat
 }

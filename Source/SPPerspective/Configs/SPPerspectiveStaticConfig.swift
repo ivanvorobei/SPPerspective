@@ -28,9 +28,9 @@ public class SPPerspectiveStaticConfig: SPPerspectiveConfig {
      Corner which higlight with launch.
      By default random.
      */
-    var corner: SPPerspectiveHighlightCorner = .random
+    public var corner: SPPerspectiveHighlightCorner = .random
     
-    init(corner: SPPerspectiveHighlightCorner,
+    public init(corner: SPPerspectiveHighlightCorner,
          distortion: CGFloat,
          angle: CGFloat,
          vectorStep: CGFloat,

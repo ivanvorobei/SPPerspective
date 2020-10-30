@@ -35,7 +35,7 @@ public class SPPerspectiveConfig {
      The higher the value, the less distortion.
      Recomended using values around `400...1200`.
      */
-    var distortionPerspective: CGFloat
+    public var distortionPerspective: CGFloat
     
     /**
      Angle of rotation. Passing value in degress, not radians.
@@ -43,7 +43,7 @@ public class SPPerspectiveConfig {
      In iOS 14 widgets using similar to 10 degress.
      Not same as distortion.
      */
-    var angle: CGFloat
+    public var angle: CGFloat
     
     /**
      Diffrence between 3D vector states.
@@ -51,13 +51,13 @@ public class SPPerspectiveConfig {
      In iOS 14 widgets using similar to 3.14.
      Better leave it and change angle or distortion.
      */
-    var vectorStep: CGFloat
+    public var vectorStep: CGFloat
     
     /**
      Configuration for shadow.
      Pass nil if no need doing shadow.
      */
-    var shadowConfig: SPPerspectiveShadowConfig?
+    public var shadowConfig: SPPerspectiveShadowConfig?
     
     init(distortion: CGFloat, angle: CGFloat, vectorStep: CGFloat, shadow: SPPerspectiveShadowConfig?) {
         self.distortionPerspective = distortion
