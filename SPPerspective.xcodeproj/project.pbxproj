@@ -31,6 +31,8 @@
 		F48F916A254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */; };
 		F48F916B254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */; };
 		F48F916F254569FD0093AA3D /* RootTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F916E254569FD0093AA3D /* RootTabController.swift */; };
+		F4D388BC254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
+		F4D388BD254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveShadowConfig.swift; sourceTree = "<group>"; };
 		F48F916E254569FD0093AA3D /* RootTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabController.swift; sourceTree = "<group>"; };
 		F48F91792545741C0093AA3D /* SPPerspective.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SPPerspective.podspec; sourceTree = "<group>"; };
+		F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveAnimationDirection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,7 @@
 				F48956872549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift */,
 				F48F9164254569A10093AA3D /* SPPerspectiveAnimationConfig.swift */,
 				F489568F2549483300391F8A /* SPPerspectiveStaticConfig.swift */,
+				F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -330,6 +334,7 @@
 				F42FB2482529ABDC008E4B10 /* AppDelegate.swift in Sources */,
 				F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */,
 				F48956A42549520000391F8A /* SPPerspectiveVector.swift in Sources */,
+				F4D388BC254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */,
 				F4895696254948C500391F8A /* SPPerspectiveConfig.swift in Sources */,
 				F48956902549483300391F8A /* SPPerspectiveStaticConfig.swift in Sources */,
 				F48956A0254951B900391F8A /* SPPerspectiveHighlightCorner.swift in Sources */,
@@ -348,6 +353,7 @@
 				F48F916B254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */,
 				F48956A52549520000391F8A /* SPPerspectiveVector.swift in Sources */,
 				F48956912549483300391F8A /* SPPerspectiveStaticConfig.swift in Sources */,
+				F4D388BD254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */,
 				F4895697254948C500391F8A /* SPPerspectiveConfig.swift in Sources */,
 				F48956A1254951B900391F8A /* SPPerspectiveHighlightCorner.swift in Sources */,
 			);

@@ -4,7 +4,7 @@
 
 ### About
 
-Animation of widgets iOS 14. 3D transform and dynamic shadow. [Video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov). Also you can configure transform and shadow as you need.
+Animation of widgets from iOS 14. 3D transform and dynamic shadow. [Video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov). Also you can configure transform and shadow as you need.
 It first release, and if you have any troubles, please, create issue.
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:

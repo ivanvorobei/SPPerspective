@@ -39,6 +39,11 @@ public class SPPerspectiveAnimationConfig: SPPerspectiveConfig {
      */
     var fromCorner: SPPerspectiveHighlightCorner = .random
     
+    /**
+     Direction of animation.
+     */
+    var direction: SPPerspectiveAnimationDirection = .random
+    
     init(duration: TimeInterval,
          distortion: CGFloat,
          angle: CGFloat,
