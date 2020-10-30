@@ -23,50 +23,24 @@
 import UIKit
 
 /**
-Highlight some side or corner.
+ Represent animation direction like clockwise or reversed.
  */
-public enum SPPerspectiveHighlightCorner: CaseIterable {
+enum SPPerspectiveAnimationDirection: CaseIterable {
     
-    case topLeft
-    case topMedium
-    case topRight
+    /**
+     Using like clockwise.
+     */
+    case forward
     
-    case mediumLeft
-    case mediumRight
-    
-    case bottomLeft
-    case bottomMedium
-    case bottomRight
+    /**
+     Using loke reversed clockwise.
+     */
+    case reverse
     
     /**
      Get random side or corner.
      */
-    static var random: SPPerspectiveHighlightCorner {
+    static var random: SPPerspectiveAnimationDirection {
         return allCases.randomElement()!
-    }
-    
-    /**
-     Ordered by clockwise or reverse.
-     
-     - parameter corner: Animation will start from its corner. If nil using default value.
-     - parameter direction: Direction of animation.
-     */
-    static func order(from corner: SPPerspectiveHighlightCorner?, direction: SPPerspectiveAnimationDirection) -> [SPPerspectiveHighlightCorner] {
-        var order: [SPPerspectiveHighlightCorner] = [.topMedium, .topRight, .mediumRight, .bottomRight, .bottomMedium, .bottomLeft, .mediumLeft, .topLeft]
-        
-        if let fromCorner = corner {
-            if let splitIndex = order.firstIndex(of: fromCorner) {
-                let prefix = order.prefix(upTo: splitIndex)
-                order.removeFirst(prefix.count)
-                order = order + prefix
-            }
-        }
-        
-        switch direction {
-        case .forward:
-            return order
-        case .reverse:
-            return order.reversed()
-        }
     }
 }

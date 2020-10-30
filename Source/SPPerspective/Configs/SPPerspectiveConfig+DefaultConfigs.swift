@@ -30,7 +30,7 @@ public extension SPPerspectiveConfig {
      */
     static var iOS14WidgetAnimatable: SPPerspectiveAnimationConfig {
         let config = SPPerspectiveAnimationConfig(
-            duration: 16,
+            duration: 4,
             distortion: iOS14WidgetDistortion,
             angle: iOS14WidgetAngle,
             vectorStep: iOS14WidgetVectorStep,

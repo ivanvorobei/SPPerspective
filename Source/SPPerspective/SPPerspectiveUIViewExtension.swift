@@ -81,7 +81,7 @@ public extension UIView {
         let angle = config.angle
         let step = config.vectorStep
         
-        var cornersOrder = SPPerspectiveHighlightCorner.clockwise(from: config.fromCorner)
+        var cornersOrder = SPPerspectiveHighlightCorner.order(from: config.fromCorner, direction: config.direction)
         cornersOrder = cornersOrder + [cornersOrder.first!]
         
         let transformValues = cornersOrder.map { makeTransform(corner: $0, distortion: distortion, angle: angle, step: step) }
