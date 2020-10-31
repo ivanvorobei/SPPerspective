@@ -51,7 +51,7 @@ public extension SPPerspectiveConfig {
      Mimicarte iOS 14 widget static tranfrom config.
      Values can update in future.
      */
-    static var iOS14Widget: SPPerspectiveStaticConfig {
+    static var iOS14WidgetStatic: SPPerspectiveStaticConfig {
         let config = SPPerspectiveStaticConfig(
             corner: .random,
             distortion: iOS14WidgetDistortion,
