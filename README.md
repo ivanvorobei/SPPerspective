@@ -4,7 +4,7 @@
 
 ### About
 
-Animation of widgets from iOS 14. 3D transform and dynamic shadow. [Video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov). Also you can configure transform and shadow as you need.
+Animatable widgets from iOS 14. 3D transform and dynamic shadow. [Video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov). Also you can configure transform and shadow as you need.
 It first release, and if you have any troubles, please, create issue.
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
@@ -19,14 +19,15 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
     - [CocoaPods](#cocoapods)
     - [Manually](#manually)
 - [Usage](#usage)
-    - [widgets iOS 14](#widgets-ios-14)
-    - [Custom](#custom-configuration)
+    - [Widgets iOS 14](#widgets-ios-14)
+    - [Configuration](#configuration)
+    - [Duration](#duration)
 - [Other Projects](#other-projects)
 - [Russian Community](#russian-community)
 
 ## Requirements
 
-Swift `+5.0`. Ready for use on iOS 12+
+Swift `5.1`. Ready for use on iOS 12+
 
 ## Installation
 
@@ -54,50 +55,60 @@ If you prefer not to use any of dependency managers, you can integrate `SPPerspe
 
 ## Usage
 
-### Widget iOS 14
+All transform working on idea of configs.
 
-You can set widgets style with one line code:
+### Widgets iOS 14
 
-```swift
-whiteView.applyPerspectiveAnimation(.iOS14Widget)
-```
-That all. It automatically added shadow and 3D transform animation.
-
-### Custom Configuration
-
-For deep customize need create config file. It object of `SPPerspectiveAnimationConfig`.
+Availalbe ready use static and animatable configs which mimicrate to iOS 14 widgets animtaion:
 
 ```swift
-let config = SPPerspectiveAnimationConfig(
-    animationDuration: 2,
-    distortionPerspective: 600,
-    angle: 10,
-    vectorStep: 3.14,
-    shadowConfig: nil
-)
+// Animatable
+whiteView.applyPerspective(.iOS14WidgetAnimatable)
+
+// Static
+whiteView.applyPerspective(.iOS14WidgetStatic)
 ```
 
-Also you can configure shadow. For it need pass `SPPerspectiveShadowConfig` to your  `SPPerspectiveAnimationConfig`.
-You can read about each value in documentation.
+### Configuration
+
+For apply tranform you shoud create and pass configuration file. Available static and animatable configuration:
+
+```swift
+// Static config, using for not animatable transform
+let staticConfig = SPPerspectiveStaticConfig(...)
+
+// Animatable config, using for animatable loop transform
+let animatableConfig = SPPerspectiveAnimationConfig(...)
+
+// Apply config to view:
+whiteView.applyPerspective(animatableConfig)
+```
+
+In configuration you shoud pass tranform values and can configure shadow.
+
+### Duration
+
+You can customize even ready-use config. For change duration shoud do it:
+
+```swift
+let config = SPPerspectiveConfig.iOS14WidgetAnimatable
+config.duration = 4
+whiteView.applyPerspective(config)
+```
 
 ## Other Projects
 
 #### [SPPermissions](https://github.com/ivanvorobei/SPPermissions)
-Allow request permissions with native dialog UI and interactive animations. Also you can request permissions without dialog. Check state any permission. You can start using this project with just two lines of code and easy customisation.
+Using for request permissions. Available native controllers with clean UI.  You can check state of any permission. Simple integration and usage like 2 lines code.
 
 #### [SPAlert](https://github.com/ivanvorobei/SPAlert)
-It is popup from Apple Music & Feedback in AppStore. Contains Done & Heart presets. Done present with draw path animation. I clone Apple's alerts as much as possible.
-You can find this alerts in AppStore after feedback, after added song to library in Apple Music. I am also add alert without icon, as simple message.
-
-#### [SparrowKit](https://github.com/ivanvorobei/SparrowKit)
-Collection of native Swift extensions to boost your development. Have extensions for `UIView`, `UIViewController`, code layout, date formatting and many other. Support tvOS and watchOS.
+Mimic to native popup. You can find this alerts in AppStore after feedback or after added song to library in Apple Music. Contains popular Done, Heart presets and many other. Done preset present with draw path animation like original. Also available simple present message without icon. Usage in one line code.
 
 #### [SPDiffable](https://github.com/ivanvorobei/SPDiffable)
-Apple's diffable API requerid models for each object type. If you want use it in many place, you pass many time to implemenet and get over duplicates codes. This project help you do it elegant with shared models and special cell providers for one-usage models.
+Apple's diffable API required models for each object type. If you want use it in many place, you pass time to implement it and get over duplicates codes. This project help do it elegant with shared models and special cell providers. Support side bar iOS14 and already has native cell providers.
 
 ## Russian Community
 
-Присоединяйтесь в телеграм канал [Код Воробья](https://t.me/sparrowcode), там найдете заметки о iOS разработке и дизайне.
-Большие туториалы выклыдываю на [YouTube](https://www.youtube.com/channel/UCNUGzZfcOyX4YpP36VzeZ6A).
+Присоединяйтесь в телеграм канал [Код Воробья](https://sparrowcode.by/telegram), там найдете заметки о iOS разработке и дизайне. Ещё туториалы выклыдываю на [YouTube](https://sparrowcode.by/youtube):
 
-[![Tutorials on YouTube](https://github.com/ivanvorobei/Assets/blob/master/Russian%20Community/youtube-preview.jpg)](https://www.youtube.com/channel/UCNUGzZfcOyX4YpP36VzeZ6A)
+[![Tutorials on YouTube](https://github.com/ivanvorobei/Assets/blob/master/Russian%20Community/youtube-preview.jpg)](https://sparrowcode.by/youtube)
