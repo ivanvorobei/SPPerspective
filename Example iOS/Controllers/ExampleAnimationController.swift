@@ -29,6 +29,7 @@ class ExampleAnimationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .secondarySystemBackground
+        navigationItem.title = "SPPerspective"
         
         whiteView.layer.cornerRadius = 17
         whiteView.backgroundColor = .systemBackground
