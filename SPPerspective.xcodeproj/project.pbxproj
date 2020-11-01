@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		F42FB2512529ABDD008E4B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2502529ABDD008E4B10 /* Assets.xcassets */; };
 		F42FB2542529ABDD008E4B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2522529ABDD008E4B10 /* LaunchScreen.storyboard */; };
 		F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B3D5325415250006CCF65 /* ExampleAnimationController.swift */; };
+		F447A675254EA6B200A67317 /* SPDiffable in Frameworks */ = {isa = PBXBuildFile; productRef = F447A674254EA6B200A67317 /* SPDiffable */; };
+		F447A679254EA6BC00A67317 /* SparrowKit in Frameworks */ = {isa = PBXBuildFile; productRef = F447A678254EA6BC00A67317 /* SparrowKit */; };
 		F48956882549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48956872549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift */; };
 		F48956892549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48956872549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift */; };
 		F48956902549483300391F8A /* SPPerspectiveStaticConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489568F2549483300391F8A /* SPPerspectiveStaticConfig.swift */; };
@@ -30,7 +32,6 @@
 		F48F9166254569A10093AA3D /* SPPerspectiveAnimationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9164254569A10093AA3D /* SPPerspectiveAnimationConfig.swift */; };
 		F48F916A254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */; };
 		F48F916B254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */; };
-		F48F916F254569FD0093AA3D /* RootTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F916E254569FD0093AA3D /* RootTabController.swift */; };
 		F4D388BC254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
 		F4D388BD254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
 /* End PBXBuildFile section */
@@ -82,7 +83,6 @@
 		F48F914625455B240093AA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F48F9164254569A10093AA3D /* SPPerspectiveAnimationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveAnimationConfig.swift; sourceTree = "<group>"; };
 		F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveShadowConfig.swift; sourceTree = "<group>"; };
-		F48F916E254569FD0093AA3D /* RootTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabController.swift; sourceTree = "<group>"; };
 		F48F91792545741C0093AA3D /* SPPerspective.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SPPerspective.podspec; sourceTree = "<group>"; };
 		F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveAnimationDirection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F447A675254EA6B200A67317 /* SPDiffable in Frameworks */,
 				F48F914A25455B240093AA3D /* SPPerspective_iOS.framework in Frameworks */,
+				F447A679254EA6BC00A67317 /* SparrowKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +145,6 @@
 			children = (
 				F48956A72549746B00391F8A /* Models */,
 				F4895694254948B300391F8A /* Configs */,
-				F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */,
 				F42FB23F2529ABBB008E4B10 /* SPPerspectiveUIViewExtension.swift */,
 			);
 			path = SPPerspective;
@@ -181,7 +182,6 @@
 		F42FB25F2529ACEC008E4B10 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F48F916E254569FD0093AA3D /* RootTabController.swift */,
 				F43B3D5325415250006CCF65 /* ExampleAnimationController.swift */,
 			);
 			path = Controllers;
@@ -195,6 +195,7 @@
 				F48F9164254569A10093AA3D /* SPPerspectiveAnimationConfig.swift */,
 				F489568F2549483300391F8A /* SPPerspectiveStaticConfig.swift */,
 				F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */,
+				F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -246,6 +247,10 @@
 				F48F914925455B240093AA3D /* PBXTargetDependency */,
 			);
 			name = "Example iOS";
+			packageProductDependencies = (
+				F447A674254EA6B200A67317 /* SPDiffable */,
+				F447A678254EA6BC00A67317 /* SparrowKit */,
+			);
 			productName = Example;
 			productReference = F42FB2442529ABDC008E4B10 /* Example iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -294,6 +299,10 @@
 				Base,
 			);
 			mainGroup = F42FB2302529AB86008E4B10;
+			packageReferences = (
+				F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */,
+				F447A677254EA6BC00A67317 /* XCRemoteSwiftPackageReference "SparrowKit" */,
+			);
 			productRefGroup = F42FB2452529ABDC008E4B10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,7 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48F916A254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */,
-				F48F916F254569FD0093AA3D /* RootTabController.swift in Sources */,
 				F48F9165254569A10093AA3D /* SPPerspectiveAnimationConfig.swift in Sources */,
 				F42FB2482529ABDC008E4B10 /* AppDelegate.swift in Sources */,
 				F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */,
@@ -504,7 +512,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Example iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,7 +581,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Example iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,6 +788,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPDiffable";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		F447A677254EA6BC00A67317 /* XCRemoteSwiftPackageReference "SparrowKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SparrowKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F447A674254EA6B200A67317 /* SPDiffable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */;
+			productName = SPDiffable;
+		};
+		F447A678254EA6BC00A67317 /* SparrowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F447A677254EA6BC00A67317 /* XCRemoteSwiftPackageReference "SparrowKit" */;
+			productName = SparrowKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F42FB2312529AB86008E4B10 /* Project object */;
 }

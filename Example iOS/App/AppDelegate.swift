@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let frame = UIScreen.main.bounds
         window = UIWindow(frame: frame)
-        window?.rootViewController = RootTabController()
+        window?.rootViewController = UINavigationController(rootViewController: ExampleAnimationController())
         window?.makeKeyAndVisible()
         return true
     }
