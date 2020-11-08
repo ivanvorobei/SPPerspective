@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4140FBC255142E500EBC77E /* WhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4140FBB255142E500EBC77E /* WhiteView.swift */; };
+		F4140FC12551453D00EBC77E /* ConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4140FC02551453D00EBC77E /* ConfigurationModel.swift */; };
+		F4140FC62551468600EBC77E /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = F4140FC52551468600EBC77E /* SPAlert */; };
 		F42FB2482529ABDC008E4B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42FB2472529ABDC008E4B10 /* AppDelegate.swift */; };
 		F42FB2512529ABDD008E4B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2502529ABDD008E4B10 /* Assets.xcassets */; };
 		F42FB2542529ABDD008E4B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2522529ABDD008E4B10 /* LaunchScreen.storyboard */; };
@@ -32,6 +35,7 @@
 		F48F9166254569A10093AA3D /* SPPerspectiveAnimationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9164254569A10093AA3D /* SPPerspectiveAnimationConfig.swift */; };
 		F48F916A254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */; };
 		F48F916B254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */; };
+		F49896EE2557E73100E70D1C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49896ED2557E73100E70D1C /* HeaderView.swift */; };
 		F4D388BC254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
 		F4D388BD254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F4140FBB255142E500EBC77E /* WhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteView.swift; sourceTree = "<group>"; };
+		F4140FC02551453D00EBC77E /* ConfigurationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationModel.swift; sourceTree = "<group>"; };
 		F42FB2372529ABBB008E4B10 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F42FB2382529ABBB008E4B10 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		F42FB2392529ABBB008E4B10 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 		F48F9164254569A10093AA3D /* SPPerspectiveAnimationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveAnimationConfig.swift; sourceTree = "<group>"; };
 		F48F9169254569B40093AA3D /* SPPerspectiveShadowConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveShadowConfig.swift; sourceTree = "<group>"; };
 		F48F91792545741C0093AA3D /* SPPerspective.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SPPerspective.podspec; sourceTree = "<group>"; };
+		F49896ED2557E73100E70D1C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveAnimationDirection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +101,7 @@
 			files = (
 				F447A675254EA6B200A67317 /* SPDiffable in Frameworks */,
 				F48F914A25455B240093AA3D /* SPPerspective_iOS.framework in Frameworks */,
+				F4140FC62551468600EBC77E /* SPAlert in Frameworks */,
 				F447A679254EA6BC00A67317 /* SparrowKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +116,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4140FBA255142D700EBC77E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4140FBB255142E500EBC77E /* WhiteView.swift */,
+				F49896ED2557E73100E70D1C /* HeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4140FBF2551452C00EBC77E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4140FC02551453D00EBC77E /* ConfigurationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F42FB2302529AB86008E4B10 = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				F42FB25B2529AC89008E4B10 /* App */,
+				F4140FBF2551452C00EBC77E /* Models */,
 				F42FB25F2529ACEC008E4B10 /* Controllers */,
+				F4140FBA255142D700EBC77E /* Views */,
 				F42FB2552529ABDD008E4B10 /* Info.plist */,
 			);
 			path = "Example iOS";
@@ -250,6 +277,7 @@
 			packageProductDependencies = (
 				F447A674254EA6B200A67317 /* SPDiffable */,
 				F447A678254EA6BC00A67317 /* SparrowKit */,
+				F4140FC52551468600EBC77E /* SPAlert */,
 			);
 			productName = Example;
 			productReference = F42FB2442529ABDC008E4B10 /* Example iOS.app */;
@@ -302,6 +330,7 @@
 			packageReferences = (
 				F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */,
 				F447A677254EA6BC00A67317 /* XCRemoteSwiftPackageReference "SparrowKit" */,
+				F4140FC42551468600EBC77E /* XCRemoteSwiftPackageReference "SPAlert" */,
 			);
 			productRefGroup = F42FB2452529ABDC008E4B10 /* Products */;
 			projectDirPath = "";
@@ -340,14 +369,17 @@
 				F48F916A254569B40093AA3D /* SPPerspectiveShadowConfig.swift in Sources */,
 				F48F9165254569A10093AA3D /* SPPerspectiveAnimationConfig.swift in Sources */,
 				F42FB2482529ABDC008E4B10 /* AppDelegate.swift in Sources */,
+				F4140FC12551453D00EBC77E /* ConfigurationModel.swift in Sources */,
 				F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */,
 				F48956A42549520000391F8A /* SPPerspectiveVector.swift in Sources */,
 				F4D388BC254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */,
+				F4140FBC255142E500EBC77E /* WhiteView.swift in Sources */,
 				F4895696254948C500391F8A /* SPPerspectiveConfig.swift in Sources */,
 				F48956902549483300391F8A /* SPPerspectiveStaticConfig.swift in Sources */,
 				F48956A0254951B900391F8A /* SPPerspectiveHighlightCorner.swift in Sources */,
 				F48956882549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift in Sources */,
 				F48F915625455B750093AA3D /* SPPerspectiveUIViewExtension.swift in Sources */,
+				F49896EE2557E73100E70D1C /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +822,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F4140FC42551468600EBC77E /* XCRemoteSwiftPackageReference "SPAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPAlert";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ivanvorobei/SPDiffable";
@@ -809,6 +849,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F4140FC52551468600EBC77E /* SPAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4140FC42551468600EBC77E /* XCRemoteSwiftPackageReference "SPAlert" */;
+			productName = SPAlert;
+		};
 		F447A674254EA6B200A67317 /* SPDiffable */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */;

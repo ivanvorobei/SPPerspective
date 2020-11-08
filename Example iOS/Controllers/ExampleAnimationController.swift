@@ -20,35 +20,138 @@
 // SOFTWARE.
 
 import UIKit
+import SparrowKit
+import SPAlert
+import SPDiffable
 
-class ExampleAnimationController: UIViewController {
-    
-    let whiteView = UIView()
+class ExampleAnimationController: SPDiffableTableController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .secondarySystemBackground
         navigationItem.title = "SPPerspective"
+        navigationItem.rightBarButtonItem = .init(
+            title: nil, image: UIImage.init(systemName: "ellipsis.circle.fill"),
+            primaryAction: UIAction.init(handler: { (_) in
+                let alertController = UIAlertController.init(title: "Choose ready-use config", message: "This list of availalbe configs. You can choose and apply any of its.", preferredStyle: .actionSheet)
+                for model in self.defaultConfigs {
+                    alertController.addAction(title: model.name, style: .default) { (_) in
+                        if let configuration = model.config as? SPPerspectiveAnimationConfig {
+                            self.animationConfig = configuration
+                            self.animatable = true
+                            SPAlert.present(title: "Applied iOS 14 animatable", preset: .done)
+                        }
+                        if let configuration = model.config as? SPPerspectiveStaticConfig {
+                            self.staticConfig = configuration
+                            self.animatable = false
+                            SPAlert.present(title: "Applied iOS 14 static", preset: .done)
+                        }
+                    }
+                }
+                alertController.addAction(title: "Cancel", style: .cancel, handler: nil)
+                alertController.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+                self.present(alertController)
+            }),
+            menu: nil
+        )
         
-        whiteView.layer.cornerRadius = 17
-        whiteView.backgroundColor = .systemBackground
-        view.addSubview(whiteView)
+        setCellProviders([SPDiffableTableCellProviders.default], sections: content)
         
-        // Animatable
-        whiteView.applyPerspective(.iOS14WidgetAnimatable)
+        let headerView = HeaderView()
+        headerView.frame.setHeight(400)
+        tableView.tableHeaderView = headerView
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        let minSideController = min(view.frame.width - view.layoutMargins.right - view.layoutMargins.left, view.frame.height - view.layoutMargins.top - view.layoutMargins.bottom)
-        let side: CGFloat = min(minSideController * 0.8, 300)
-        whiteView.frame = CGRect.init(x: 0, y: 140, width: side, height: side)
-        whiteView.center = CGPoint.init(x: view.center.x, y: view.layoutMargins.top + (view.frame.height - view.layoutMargins.top - view.layoutMargins.bottom) / 2)
+    private var content: [SPDiffableSection] {
         
-        if view.frame.width < view.frame.height {
-            whiteView.center.y = whiteView.center.y - 40
+        var content: [SPDiffableSection] = []
+        
+        let animatableSection = SPDiffableSection(
+            identifier: Section.animatable.identifier,
+            header: nil,
+            footer: nil,
+            items: [
+                SPDiffableTableRowSwitch(
+                    identifier: animatableSwitchKey, text: "Animatable", icon: nil, isOn: animatable, action: { [weak self] (isOn) in
+                        guard let self = self else { return }
+                        self.animatable = isOn
+                    })
+            ])
+        content.append(animatableSection)
+        
+        
+        if animatable {
+            let animationConfigSection = SPDiffableSection(
+                identifier: Section.animationConfiguration.identifier,
+                header: nil,
+                footer: nil,
+                items: [
+                    SPDiffableTableRow(text: "Example 1"),
+                    SPDiffableTableRow(text: "Example 2"),
+                    SPDiffableTableRow(text: "Example 3")
+                ])
+            content.append(animationConfigSection)
+        } else {
+            let staticConfigSection = SPDiffableSection(
+                identifier: Section.staticConfiguration.identifier,
+                header: nil,
+                footer: nil,
+                items: [
+                    SPDiffableTableRow(text: "Example 4"),
+                    SPDiffableTableRow(text: "Example 5")
+                ])
+            content.append(staticConfigSection)
         }
+        return content
+    }
+    
+    fileprivate func updateContent(animated: Bool) {
+        diffableDataSource?.apply(content, animating: animated)
+        if let headerView = tableView.tableHeaderView as? HeaderView {
+            headerView.whiteView.applyPerspective(animatable ? animationConfig : staticConfig)
+        }
+        if let indexPath = diffableDataSource?.indexPath(for: animatableSwitchKey), let cell = tableView.cellForRow(at: indexPath), let `switch` = cell.accessoryView as? SPDiffableSwitch {
+            `switch`.setOn(animatable, animated: true)
+        }
+    }
+    
+    // MARK: - Properties
+    
+    var animatable: Bool = true {
+        didSet {
+            self.updateContent(animated: true)
+        }
+    }
+    
+    var animationConfig: SPPerspectiveAnimationConfig = .iOS14WidgetAnimatable
+    
+    var staticConfig: SPPerspectiveStaticConfig = .iOS14WidgetStatic
+    
+    let defaultConfigs: [ConfigurationModel] = [
+        ConfigurationModel(name: "iOS 14 Widget Static", config: .iOS14WidgetStatic),
+        ConfigurationModel(name: "iOS 14 Widget Animatable", config: .iOS14WidgetAnimatable)
+    ]
+    
+    // MARK: - Data
+    
+    enum Section: String {
         
-        whiteView.center.x = view.frame.width / 2
+        case animatable
+        case animationConfiguration
+        case staticConfiguration
+        
+        var identifier: String { return rawValue }
+    }
+    
+    var animatableSwitchKey: String { return "animatable-switch" }
+    
+    // MARK: - Init
+    
+    init() {
+        super.init(style: .insetGrouped)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
