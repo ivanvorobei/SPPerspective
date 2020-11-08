@@ -20,6 +20,7 @@
 // SOFTWARE.
 
 import UIKit
+import SparrowKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

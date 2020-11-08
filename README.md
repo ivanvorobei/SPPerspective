@@ -20,8 +20,9 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
     - [Manually](#manually)
 - [Usage](#usage)
     - [Widgets iOS 14](#widgets-ios-14)
-    - [Configuration](#configuration)
+- [Configuration](#configuration)
     - [Duration](#duration)
+    - [Shadow](#shadow)
 - [Other Projects](#other-projects)
 - [Russian Community](#russian-community)
 
@@ -59,7 +60,7 @@ All transform working on idea of configs.
 
 ### Widgets iOS 14
 
-Availalbe ready use static and animatable configs which mimicrate to iOS 14 widgets animtaion:
+Availalbe ready use *static* and *animatable* configs which mimicrate to iOS 14 widgets animtaion:
 
 ```swift
 // Animatable
@@ -69,7 +70,7 @@ whiteView.applyPerspective(.iOS14WidgetAnimatable)
 whiteView.applyPerspective(.iOS14WidgetStatic)
 ```
 
-### Configuration
+## Configuration
 
 For apply tranform you shoud create and pass configuration file. Available static and animatable configuration:
 
@@ -85,6 +86,24 @@ whiteView.applyPerspective(animatableConfig)
 ```
 
 In configuration you shoud pass tranform values and can configure shadow.
+
+### Shadow
+
+Shadow also trnaslation with transform of view like real object. That's why need apply shadow by config. Create configuration object for shadow:
+
+```swift
+let shadowConfig = SPPerspectiveShadowConfig(
+    blurRadius: 19,
+    opacity: 0.25,
+    color: UIColor.black,
+    maximumHorizontalOffset: 12,
+    startVerticalOffset: 8,
+    cornerVerticalOffset: 18,
+    maximumVerticalOffset: 21
+)
+```
+
+And pass it to when init `SPPerspectiveAnimationConfig` or `SPPerspectiveStaticConfig`.
 
 ### Duration
 

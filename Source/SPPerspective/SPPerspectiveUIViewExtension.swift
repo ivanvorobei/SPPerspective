@@ -40,11 +40,28 @@ public extension UIView {
     }
     
     /**
+     Reset perspective configuration like transofrm and shadow.
+     
+     Always calling before apply new configuration - static or animatable.
+     */
+    func resetPerspective() {
+        layer.transform = CATransform3DIdentity
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 0
+        layer.shadowOpacity = 0
+        layer.shadowColor = nil
+        layer.removeAnimation(forKey: animationTransformKey)
+        layer.removeAnimation(forKey: animationShadowKey)
+    }
+    
+    /**
      Apply static perspective config.
      
      - parameter config: Static config of perspective.
      */
     fileprivate func applyStaticPerspective(with config: SPPerspectiveStaticConfig) {
+        
+        resetPerspective()
         
         // Process 3D Animation
         
@@ -61,12 +78,17 @@ public extension UIView {
         layer.shadowColor = shadowConfig.color.cgColor
     }
     
+    fileprivate var animationTransformKey: String { return "SPPerspective - Transform" }
+    fileprivate var animationShadowKey : String { return "SPPerspective - Shadow" }
+    
     /**
      Apply animatable perspective config.
      
      - parameter config: Animation config of perspective.
      */
     fileprivate func applyAnimationPerspective(with config: SPPerspectiveAnimationConfig) {
+        
+        resetPerspective()
         
         // Process 3D Animation
         
@@ -100,7 +122,7 @@ public extension UIView {
         }
         transformAnimation.timingFunctions = transformTimingFunctions
         
-        layer.add(transformAnimation, forKey: "SPPerspective - Transform")
+        layer.add(transformAnimation, forKey: animationTransformKey)
         
         // Process shadow
         
@@ -132,7 +154,7 @@ public extension UIView {
         }
         shadowAnimation.timingFunctions = shadowTimingFunctions
         
-        layer.add(shadowAnimation, forKey: "SPPerspective - Shadow")
+        layer.add(shadowAnimation, forKey: animationShadowKey)
     }
     
     // MARK: - Makers
