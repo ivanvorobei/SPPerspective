@@ -8,9 +8,8 @@ class HeaderView: SPView {
     override func commonInit() {
         super.commonInit()
         backgroundColor = .clear
-        
         addSubview(whiteView)
-        whiteView.applyPerspective(.iOS14WidgetAnimatable)
+        frame.setHeight(400)
     }
     
     override func layoutSubviews() {

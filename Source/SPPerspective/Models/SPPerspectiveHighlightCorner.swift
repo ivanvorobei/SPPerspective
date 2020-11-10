@@ -24,7 +24,7 @@ import UIKit
 /**
 Highlight some side or corner.
  */
-public enum SPPerspectiveHighlightCorner: CaseIterable {
+public enum SPPerspectiveHighlightCorner: String, CaseIterable {
     
     case topLeft
     case topMedium
@@ -53,6 +53,13 @@ public enum SPPerspectiveHighlightCorner: CaseIterable {
     public static func order(from corner: SPPerspectiveHighlightCorner?, direction: SPPerspectiveAnimationDirection) -> [SPPerspectiveHighlightCorner] {
         var order: [SPPerspectiveHighlightCorner] = [.topMedium, .topRight, .mediumRight, .bottomRight, .bottomMedium, .bottomLeft, .mediumLeft, .topLeft]
         
+        switch direction {
+        case .forward:
+            break
+        case .reverse:
+            order = order.reversed()
+        }
+        
         if let fromCorner = corner {
             if let splitIndex = order.firstIndex(of: fromCorner) {
                 let prefix = order.prefix(upTo: splitIndex)
@@ -61,11 +68,6 @@ public enum SPPerspectiveHighlightCorner: CaseIterable {
             }
         }
         
-        switch direction {
-        case .forward:
-            return order
-        case .reverse:
-            return order.reversed()
-        }
+        return order
     }
 }
