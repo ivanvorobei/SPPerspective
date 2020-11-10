@@ -13,6 +13,7 @@
 		F42FB2482529ABDC008E4B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42FB2472529ABDC008E4B10 /* AppDelegate.swift */; };
 		F42FB2512529ABDD008E4B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2502529ABDD008E4B10 /* Assets.xcassets */; };
 		F42FB2542529ABDD008E4B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2522529ABDD008E4B10 /* LaunchScreen.storyboard */; };
+		F4398D6E255A63E20047093F /* DiffableTableRowSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4398D6D255A63E20047093F /* DiffableTableRowSlider.swift */; };
 		F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B3D5325415250006CCF65 /* ExampleAnimationController.swift */; };
 		F447A675254EA6B200A67317 /* SPDiffable in Frameworks */ = {isa = PBXBuildFile; productRef = F447A674254EA6B200A67317 /* SPDiffable */; };
 		F447A679254EA6BC00A67317 /* SparrowKit in Frameworks */ = {isa = PBXBuildFile; productRef = F447A678254EA6BC00A67317 /* SparrowKit */; };
@@ -38,6 +39,7 @@
 		F49896EE2557E73100E70D1C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49896ED2557E73100E70D1C /* HeaderView.swift */; };
 		F4D388BC254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
 		F4D388BD254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */; };
+		F4D83C2825591BC600097F51 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D83C2725591BC500097F51 /* SliderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 		F42FB2502529ABDD008E4B10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F42FB2532529ABDD008E4B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42FB2552529ABDD008E4B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4398D6D255A63E20047093F /* DiffableTableRowSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableRowSlider.swift; sourceTree = "<group>"; };
 		F43B3D5325415250006CCF65 /* ExampleAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAnimationController.swift; sourceTree = "<group>"; };
 		F48956872549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SPPerspectiveConfig+DefaultConfigs.swift"; sourceTree = "<group>"; };
 		F489568F2549483300391F8A /* SPPerspectiveStaticConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveStaticConfig.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		F48F91792545741C0093AA3D /* SPPerspective.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SPPerspective.podspec; sourceTree = "<group>"; };
 		F49896ED2557E73100E70D1C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveAnimationDirection.swift; sourceTree = "<group>"; };
+		F4D83C2725591BC500097F51 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			children = (
 				F4140FBB255142E500EBC77E /* WhiteView.swift */,
 				F49896ED2557E73100E70D1C /* HeaderView.swift */,
+				F4D83C2725591BC500097F51 /* SliderTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F4140FC02551453D00EBC77E /* ConfigurationModel.swift */,
+				F4398D6D255A63E20047093F /* DiffableTableRowSlider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,6 +376,8 @@
 				F48F9165254569A10093AA3D /* SPPerspectiveAnimationConfig.swift in Sources */,
 				F42FB2482529ABDC008E4B10 /* AppDelegate.swift in Sources */,
 				F4140FC12551453D00EBC77E /* ConfigurationModel.swift in Sources */,
+				F4D83C2825591BC600097F51 /* SliderTableViewCell.swift in Sources */,
+				F4398D6E255A63E20047093F /* DiffableTableRowSlider.swift in Sources */,
 				F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */,
 				F48956A42549520000391F8A /* SPPerspectiveVector.swift in Sources */,
 				F4D388BC254C089F003B93DE /* SPPerspectiveAnimationDirection.swift in Sources */,
