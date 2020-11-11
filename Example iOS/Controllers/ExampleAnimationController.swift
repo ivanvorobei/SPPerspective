@@ -141,6 +141,46 @@ class ExampleAnimationController: SPDiffableTableController {
                     action: { [weak self] (value) in
                         guard let self = self else { return }
                         self.shadowOpacity = CGFloat(value)
+                    }),
+                DiffableTableRowSlider(
+                    identifier: Section.Row.shadowMaximumHorizontalOffset.identifier,
+                    text: "Maximum Horizontal Offset",
+                    value: Double(shadowMaximumHorizontalOffset),
+                    minimumValue: Double(0),
+                    maximumValue: Double(100),
+                    action: { [weak self] (value) in
+                        guard let self = self else { return }
+                        self.shadowMaximumHorizontalOffset = CGFloat(value)
+                    }),
+                DiffableTableRowSlider(
+                    identifier: Section.Row.shadowStartVerticalOffset.identifier,
+                    text: "Start Vertical Offset",
+                    value: Double(shadowStartVerticalOffset),
+                    minimumValue: Double(-10),
+                    maximumValue: Double(50),
+                    action: { [weak self] (value) in
+                        guard let self = self else { return }
+                        self.shadowStartVerticalOffset = CGFloat(value)
+                    }),
+                DiffableTableRowSlider(
+                    identifier: Section.Row.shadowCornerVerticalOffset.identifier,
+                    text: "Corner Vertical Offset",
+                    value: Double(shadowCornerVerticalOffset),
+                    minimumValue: Double(-10),
+                    maximumValue: Double(50),
+                    action: { [weak self] (value) in
+                        guard let self = self else { return }
+                        self.shadowCornerVerticalOffset = CGFloat(value)
+                    }),
+                DiffableTableRowSlider(
+                    identifier: Section.Row.shadowMaximumVerticalOffset.identifier,
+                    text: "Maximum Vertical Offset",
+                    value: Double(shadowMaximumVerticalOffset),
+                    minimumValue: Double(-10),
+                    maximumValue: Double(50),
+                    action: { [weak self] (value) in
+                        guard let self = self else { return }
+                        self.shadowMaximumVerticalOffset = CGFloat(value)
                     })
             ])
         content.append(shadowSection)
@@ -148,64 +188,32 @@ class ExampleAnimationController: SPDiffableTableController {
         return content
     }
     
-    /**
-     Using for update preview and update sliders and values on cells.
-     */
-    fileprivate func updatePreviewAndContent() {
-        diffableDataSource?.apply(content, animated: true)
-        if let indexPath = diffableDataSource?.indexPath(for: Section.Row.animatableSwitch.identifier), let cell = tableView.cellForRow(at: indexPath), let `switch` = cell.accessoryView as? SPDiffableSwitch {
-            `switch`.setOn(self.animatable, animated: true)
-        }
-        if let cell = diffableDataSource?.cell(SliderTableViewCell.self, for: Section.Row.animationDuration.identifier) {
-            cell.slider.setValue(Float(animationDuration))
-        }
-        if let cell = diffableDataSource?.cell(SliderTableViewCell.self, for: Section.Row.distortionPerspective.identifier) {
-            cell.slider.setValue(Float(distortionPerspective))
-        }
-        if let cell = diffableDataSource?.cell(SliderTableViewCell.self, for: Section.Row.angle.identifier) {
-            cell.slider.setValue(Float(angle))
-        }
-        if let cell = diffableDataSource?.cell(SliderTableViewCell.self, for: Section.Row.shadowOpacity.identifier) {
-            cell.slider.setValue(Float(shadowOpacity))
-        }
-        if let cell = diffableDataSource?.cell(SliderTableViewCell.self, for: Section.Row.shadowBlurRadius.identifier) {
-            cell.slider.setValue(Float(shadowBlurRadius))
-        }
-        if let headerView = tableView.tableHeaderView as? HeaderView {
-            let config: SPPerspectiveConfig = { [weak self] in
-                guard let self = self else { return SPPerspectiveConfig.iOS14WidgetStatic }
-                let startCorner = SPPerspectiveHighlightCorner.topLeft
-                if animatable {
-                    let config = SPPerspectiveConfig.iOS14WidgetAnimatable
-                    config.animationDuration = self.animationDuration
-                    config.fromCorner = startCorner
-                    return config
-                } else {
-                    let config = SPPerspectiveConfig.iOS14WidgetStatic
-                    config.corner = startCorner
-                    return config
-                }
-            }()
-            config.distortionPerspective = distortionPerspective
-            config.angle = angle
-            config.shadowConfig?.blurRadius = shadowBlurRadius
-            config.shadowConfig?.opacity = shadowOpacity
-            headerView.whiteView.applyPerspective(config)
-        }
-    }
-    
     // MARK: - Properties
     
-    var animatable: Bool = true { didSet { self.updatePreviewAndContent() } }
-    var animationDuration: TimeInterval = SPPerspectiveConfig.iOS14WidgetAnimatable.animationDuration  { didSet { self.updatePreviewAndContent() } }
-    var distortionPerspective: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.distortionPerspective  { didSet { self.updatePreviewAndContent() } }
-    var angle: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.angle  { didSet { self.updatePreviewAndContent() } }
-    var shadowBlurRadius: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.blurRadius ?? 0  { didSet { self.updatePreviewAndContent() } }
-    var shadowOpacity: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.opacity ?? 0  { didSet { self.updatePreviewAndContent() } }
+    var animatable: Bool = true
+    { didSet { self.updatePreviewAndContent() } }
+    var animationDuration: TimeInterval = SPPerspectiveConfig.iOS14WidgetAnimatable.animationDuration
+    { didSet { self.updatePreviewAndContent() } }
+    var distortionPerspective: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.distortionPerspective
+    { didSet { self.updatePreviewAndContent() } }
+    var angle: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.angle
+    { didSet { self.updatePreviewAndContent() } }
+    var shadowBlurRadius: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.blurRadius ?? 0
+    { didSet { self.updatePreviewAndContent() } }
+    var shadowOpacity: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.opacity ?? 0
+    { didSet { self.updatePreviewAndContent() } }
+    var shadowMaximumHorizontalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.maximumHorizontalOffset ?? 0
+    { didSet { self.updatePreviewAndContent() } }
+    var shadowStartVerticalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.startVerticalOffset ?? 0
+    { didSet { self.updatePreviewAndContent() } }
+    var shadowCornerVerticalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.cornerVerticalOffset ?? 0
+    { didSet { self.updatePreviewAndContent() } }
+    var shadowMaximumVerticalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.maximumVerticalOffset ?? 0
+    { didSet { self.updatePreviewAndContent() } }
     
     // MARK: - Data
     
-    let defaultConfigs: [ConfigurationModel] = [
+    private let defaultConfigs: [ConfigurationModel] = [
         ConfigurationModel(name: "iOS 14 Widget Static", config: .iOS14WidgetStatic),
         ConfigurationModel(name: "iOS 14 Widget Animatable", config: .iOS14WidgetAnimatable)
     ]
@@ -213,24 +221,13 @@ class ExampleAnimationController: SPDiffableTableController {
     /**
      Cell Provider for slider table cell.
      */
-    var extendCellProvider: SPDiffableTableCellProvider {
-        let cellProvider: SPDiffableTableCellProvider = { (tableView, indexPath, item) -> UITableViewCell? in
+    private var extendCellProvider: SPDiffableTableCellProvider {
+        let cellProvider: SPDiffableTableCellProvider = { [weak self] (tableView, indexPath, item) -> UITableViewCell? in
+            guard let self = self else { return nil }
             switch item {
             case let model as DiffableTableRowSlider:
                 let cell = tableView.dequeueReusableCell(withClass: SliderTableViewCell.self, for: indexPath)
-                cell.slider.minimumValue = Float(model.minimumValue)
-                cell.slider.minimumTrackLabel.text = "\(Int(model.minimumValue))"
-                cell.slider.maximumValue = Float(model.maximumValue)
-                cell.slider.maximumTrackLabel.text = "\(Int(model.maximumValue))"
-                cell.slider.value = Float(model.value)
-                cell.titleLabel.text = model.text
-                cell.valueLabel.text = "\(round(cell.slider.value * 10) / 10)"
-                cell.sliderAction = UIAction.init(handler: { [weak self] (action) in
-                    guard let _ = self else { return }
-                    cell.valueLabel.text = "\(round(cell.slider.value * 10) / 10)"
-                    model.action(Double(cell.slider.value))
-                })
-                cell.layoutSubviews()
+                self.configure(cell: cell, by: model)
                 return cell
             default:
                 break
@@ -240,20 +237,23 @@ class ExampleAnimationController: SPDiffableTableController {
         return cellProvider
     }
     
-    var rightBarButtonItem: UIBarButtonItem {
+    private var rightBarButtonItem: UIBarButtonItem {
         return UIBarButtonItem.init(
             title: nil, image: UIImage.init(systemName: "ellipsis.circle.fill"),
             primaryAction: UIAction.init(handler: { (_) in
                 let alertController = UIAlertController.init(title: "Choose ready-use config", message: "This list of availalbe configs. You can choose and apply any of its.", preferredStyle: .actionSheet)
                 for model in self.defaultConfigs {
                     alertController.addAction(title: model.name, style: .default) { (_) in
-                        
                         let apply: (SPPerspectiveConfig) -> Void = { [weak self] config in
                             guard let self = self else { return }
                             self.distortionPerspective = config.distortionPerspective
                             self.angle = config.angle
                             self.shadowOpacity = config.shadowConfig?.opacity ?? 0
                             self.shadowBlurRadius = config.shadowConfig?.blurRadius ?? 0
+                            self.shadowMaximumHorizontalOffset = config.shadowConfig?.maximumHorizontalOffset ?? 0
+                            self.shadowStartVerticalOffset = config.shadowConfig?.startVerticalOffset ?? 0
+                            self.shadowCornerVerticalOffset = config.shadowConfig?.cornerVerticalOffset ?? 0
+                            self.shadowMaximumVerticalOffset = config.shadowConfig?.maximumVerticalOffset ?? 0
                         }
                         
                         if let configuration = model.config as? SPPerspectiveAnimationConfig {
@@ -278,6 +278,67 @@ class ExampleAnimationController: SPDiffableTableController {
         )
     }
     
+    // MARK: - Helpers
+    
+    private func configure(cell: SliderTableViewCell, by model: DiffableTableRowSlider) {
+        cell.slider.minimumValue = Float(model.minimumValue)
+        cell.slider.minimumTrackLabel.text = "\(Int(model.minimumValue))"
+        cell.slider.maximumValue = Float(model.maximumValue)
+        cell.slider.maximumTrackLabel.text = "\(Int(model.maximumValue))"
+        cell.slider.value = Float(model.value)
+        cell.titleLabel.text = model.text
+        cell.valueLabel.text = "\(round(cell.slider.value * 10) / 10)"
+        cell.sliderAction = UIAction.init(handler: { [weak self] (action) in
+            guard let _ = self else { return }
+            cell.valueLabel.text = "\(round(cell.slider.value * 10) / 10)"
+            model.action(Double(cell.slider.value))
+        })
+        cell.layoutSubviews()
+    }
+    
+    /**
+     Using for update preview and update sliders and values on cells.
+     */
+    fileprivate func updatePreviewAndContent() {
+        diffableDataSource?.apply(content, animated: true)
+        if let indexPath = diffableDataSource?.indexPath(for: Section.Row.animatableSwitch.identifier), let cell = tableView.cellForRow(at: indexPath), let `switch` = cell.accessoryView as? SPDiffableSwitch {
+            `switch`.setOn(self.animatable, animated: true)
+        }
+        
+        // Update all cells with slider to new data.
+        for indexPath in tableView.indexPathsForVisibleRows ?? [] {
+            guard let model = diffableDataSource?.item(for: indexPath) as? DiffableTableRowSlider else { continue }
+            guard let cell = diffableDataSource?.cell(SliderTableViewCell.self, for: model.identifier) else { continue }
+            self.configure(cell: cell, by: model)
+        }
+        
+        if let headerView = tableView.tableHeaderView as? HeaderView {
+            let config: SPPerspectiveConfig = { [weak self] in
+                guard let self = self else { return SPPerspectiveConfig.iOS14WidgetStatic }
+                let startCorner = SPPerspectiveHighlightCorner.topLeft
+                if animatable {
+                    let config = SPPerspectiveConfig.iOS14WidgetAnimatable
+                    config.animationDuration = self.animationDuration
+                    config.fromCorner = startCorner
+                    return config
+                } else {
+                    let config = SPPerspectiveConfig.iOS14WidgetStatic
+                    config.corner = startCorner
+                    return config
+                }
+            }()
+            config.distortionPerspective = distortionPerspective
+            config.angle = angle
+            config.shadowConfig?.blurRadius = shadowBlurRadius
+            config.shadowConfig?.opacity = shadowOpacity
+            config.shadowConfig?.maximumHorizontalOffset = shadowMaximumHorizontalOffset
+            config.shadowConfig?.startVerticalOffset = shadowStartVerticalOffset
+            config.shadowConfig?.cornerVerticalOffset = shadowCornerVerticalOffset
+            config.shadowConfig?.maximumVerticalOffset = shadowMaximumVerticalOffset
+            headerView.whiteView.applyPerspective(config)
+        }
+    }
+    
     // MARK: - Models
     
     enum Section: String {
@@ -289,7 +350,7 @@ class ExampleAnimationController: SPDiffableTableController {
         
         var identifier: String { return rawValue }
         
-        enum Row: String {
+        enum Row: String, CaseIterable {
             
             case animatableSwitch
             case animationDuration
@@ -297,6 +358,10 @@ class ExampleAnimationController: SPDiffableTableController {
             case angle
             case shadowBlurRadius
             case shadowOpacity
+            case shadowMaximumHorizontalOffset
+            case shadowStartVerticalOffset
+            case shadowCornerVerticalOffset
+            case shadowMaximumVerticalOffset
             
             var identifier: String { return rawValue }
         }
