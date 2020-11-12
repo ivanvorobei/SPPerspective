@@ -29,6 +29,15 @@ public class SPPerspectiveStaticConfig: SPPerspectiveConfig {
      */
     public var corner: SPPerspectiveHighlightCorner = .random
     
+    /**
+     Create animation config.
+     
+     - parameter corner: Higlight corner.
+     - parameter distortion: Amount of distortion.
+     - parameter angle: Amount of rotation.
+     - parameter vectorStep: Distance of rotation from corners and basic state.
+     - parameter shadow: Shadow configuration.
+     */
     public init(corner: SPPerspectiveHighlightCorner,
          distortion: CGFloat,
          angle: CGFloat,

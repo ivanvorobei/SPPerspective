@@ -43,6 +43,15 @@ public class SPPerspectiveAnimationConfig: SPPerspectiveConfig {
      */
     public var direction: SPPerspectiveAnimationDirection = .random
     
+    /**
+     Create animation config.
+     
+     - parameter duration: Duration of animation.
+     - parameter distortion: Amount of distortion.
+     - parameter angle: Amount of rotation.
+     - parameter vectorStep: Distance of rotation from corners and basic state.
+     - parameter shadow: Shadow configuration.
+     */
     public init(duration: TimeInterval,
          distortion: CGFloat,
          angle: CGFloat,
