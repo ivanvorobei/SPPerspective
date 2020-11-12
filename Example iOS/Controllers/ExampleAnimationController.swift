@@ -52,7 +52,7 @@ class ExampleAnimationController: SPDiffableTableController {
         let animatableSection = SPDiffableSection(
             identifier: Section.animatable.identifier,
             header: nil,
-            footer: SPDiffableTextHeaderFooter(text: "You can set as animatabe or not style. With it changes will be available valid properties."),
+            footer: SPDiffableTextHeaderFooter(text: "You can set as animatabe or not style. With animation you can change duration."),
             items: [
                 SPDiffableTableRowSwitch(
                     identifier: Section.Row.animatableSwitch.identifier,
@@ -61,7 +61,23 @@ class ExampleAnimationController: SPDiffableTableController {
                     action: { [weak self] (isOn) in
                         guard let self = self else { return }
                         self.animatable = isOn
-                    })
+                    }),
+                SPDiffableTableRow(
+                    identifier: Section.Row.fromCorner.identifier,
+                    text: "Higlight Corner",
+                    detail: self.fromCorner.rawValue,
+                    icon: nil,
+                    accessoryType: .none,
+                    selectionStyle: .none,
+                    action: { [weak self] (indexPath) in
+                        guard let self = self else { return }
+                        guard let next = SPPerspectiveHighlightCorner.order(from: self.fromCorner, direction: .forward)[safe: 1] else { return }
+                        self.fromCorner = next
+                        if let cell = self.diffableDataSource?.cell(SPDiffableTableViewCell.self, for: Section.Row.fromCorner.identifier) {
+                            cell.detailTextLabel?.text = self.fromCorner.rawValue
+                        }
+                    }
+                )
             ])
         content.append(animatableSection)
         
@@ -90,7 +106,7 @@ class ExampleAnimationController: SPDiffableTableController {
         let transformConfigSection = SPDiffableSection(
             identifier: Section.transformConfiguration.identifier,
             header: SPDiffableTextHeaderFooter(text: "Transforms"),
-            footer: nil,
+            footer: SPDiffableTextHeaderFooter(text: "Angle change amount of rotation degress. Perspective change visible distortion."),
             items: [
                 DiffableTableRowSlider(
                     identifier: Section.Row.distortionPerspective.identifier,
@@ -120,7 +136,7 @@ class ExampleAnimationController: SPDiffableTableController {
         let shadowSection = SPDiffableSection(
             identifier: Section.shadowConfiguration.identifier,
             header: SPDiffableTextHeaderFooter(text: "Shadow"),
-            footer: SPDiffableTextHeaderFooter(text: "If turn on animatable, shadow automatically will change position."),
+            footer: SPDiffableTextHeaderFooter(text: "You should set the following values in increment: [Start Vertical offset, Corner Vertical offset, Maximum Vertical offset]. Horizontall offset you can set any."),
             items: [
                 DiffableTableRowSlider(
                     identifier: Section.Row.shadowBlurRadius.identifier,
@@ -190,25 +206,37 @@ class ExampleAnimationController: SPDiffableTableController {
     
     // MARK: - Properties
     
-    var animatable: Bool = true
+    var animatable = true
     { didSet { self.updatePreviewAndContent() } }
-    var animationDuration: TimeInterval = SPPerspectiveConfig.iOS14WidgetAnimatable.animationDuration
+    
+    var fromCorner = SPPerspectiveHighlightCorner.topLeft
     { didSet { self.updatePreviewAndContent() } }
-    var distortionPerspective: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.distortionPerspective
+    
+    var animationDuration = SPPerspectiveConfig.iOS14WidgetAnimatable.animationDuration
     { didSet { self.updatePreviewAndContent() } }
-    var angle: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.angle
+    
+    var distortionPerspective = SPPerspectiveConfig.iOS14WidgetStatic.distortionPerspective
     { didSet { self.updatePreviewAndContent() } }
-    var shadowBlurRadius: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.blurRadius ?? 0
+    
+    var angle = SPPerspectiveConfig.iOS14WidgetStatic.angle
     { didSet { self.updatePreviewAndContent() } }
-    var shadowOpacity: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.opacity ?? 0
+    
+    var shadowBlurRadius = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.blurRadius ?? 0
     { didSet { self.updatePreviewAndContent() } }
-    var shadowMaximumHorizontalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.maximumHorizontalOffset ?? 0
+    
+    var shadowOpacity = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.opacity ?? 0
     { didSet { self.updatePreviewAndContent() } }
-    var shadowStartVerticalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.startVerticalOffset ?? 0
+    
+    var shadowMaximumHorizontalOffset = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.maximumHorizontalOffset ?? 0
     { didSet { self.updatePreviewAndContent() } }
-    var shadowCornerVerticalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.cornerVerticalOffset ?? 0
+    
+    var shadowStartVerticalOffset = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.startVerticalOffset ?? 0
     { didSet { self.updatePreviewAndContent() } }
-    var shadowMaximumVerticalOffset: CGFloat = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.maximumVerticalOffset ?? 0
+    
+    var shadowCornerVerticalOffset = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.cornerVerticalOffset ?? 0
+    { didSet { self.updatePreviewAndContent() } }
+    
+    var shadowMaximumVerticalOffset = SPPerspectiveConfig.iOS14WidgetStatic.shadowConfig?.maximumVerticalOffset ?? 0
     { didSet { self.updatePreviewAndContent() } }
     
     // MARK: - Data
@@ -315,15 +343,14 @@ class ExampleAnimationController: SPDiffableTableController {
         if let headerView = tableView.tableHeaderView as? HeaderView {
             let config: SPPerspectiveConfig = { [weak self] in
                 guard let self = self else { return SPPerspectiveConfig.iOS14WidgetStatic }
-                let startCorner = SPPerspectiveHighlightCorner.topLeft
                 if animatable {
                     let config = SPPerspectiveConfig.iOS14WidgetAnimatable
                     config.animationDuration = self.animationDuration
-                    config.fromCorner = startCorner
+                    config.fromCorner = self.fromCorner
                     return config
                 } else {
                     let config = SPPerspectiveConfig.iOS14WidgetStatic
-                    config.corner = startCorner
+                    config.corner = self.fromCorner
                     return config
                 }
             }()
@@ -353,6 +380,7 @@ class ExampleAnimationController: SPDiffableTableController {
         enum Row: String, CaseIterable {
             
             case animatableSwitch
+            case fromCorner
             case animationDuration
             case distortionPerspective
             case angle
