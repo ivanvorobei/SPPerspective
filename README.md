@@ -3,14 +3,12 @@
 <a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
 <img 
 align="left" 
-src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%20Preview.png" width="420"/>
+src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%20Preview.png" width="460"/>
 </a>
 
 ### About
 
-Animatable widgets from iOS 14. Same animation for transform and shadow. 
-
-Also you can customise it and duration, shadow translation and perspective angle. For visual edit better use [exampple application](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov).
+Animatable widgets from iOS 14. Same animation for transform and shadow. You can customise it and duration, shadow translation and perspective angle also. For visual edit better use [exampple application](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov).
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
