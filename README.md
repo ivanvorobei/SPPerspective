@@ -70,8 +70,10 @@ TODO: Add usage configuration, update navigation on top. Here add video preview 
 <a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
 <img 
 align="left" 
-src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="420"/>
+src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="200"/>
 </a>
+
+Here usage details.
 
 ## Other Projects
 
