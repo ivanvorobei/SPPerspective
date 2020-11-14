@@ -8,7 +8,9 @@ src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%
 
 ### About
 
-Animatable widgets from iOS 14. Same animation for transform and shadow. Also you can customise it and duration, shadow translation and perspective angle. For visual edit better use [exampple application](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov).
+Animatable widgets from iOS 14. Same animation for transform and shadow. 
+
+Also you can customise it and duration, shadow translation and perspective angle. For visual edit better use [exampple application](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov).
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
