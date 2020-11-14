@@ -10,3 +10,6 @@ Packages/
 Package.resolved
 *.xcodeproj
 .swiftpm
+
+# Temporary
+Assets/Readme/Design/
