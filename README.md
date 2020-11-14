@@ -3,7 +3,7 @@
 <a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
 <img 
 align="left" 
-src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%20Preview%20-%201.2.png" width="420"/>
+src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%20Preview.png" width="420"/>
 </a>
 
 ### About
@@ -31,7 +31,7 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
     - [Rotation](#)
     - [Shadow](#)
 - [Other Projects](#other-projects)
-- [Russian Specking Community](#russian-specking-community)
+- [Russian-specking Community](#russian-specking-community)
 
 ## Requirements
 
@@ -67,6 +67,12 @@ TODO: Add usage configuration, update navigation on top. Here add video preview 
 
 ## Customise
 
+<a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
+<img 
+align="left" 
+src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="420"/>
+</a>
+
 ## Other Projects
 
 #### [SPPermissions](https://github.com/ivanvorobei/SPPermissions)
@@ -81,7 +87,7 @@ Animation of widgets from iOS 14. 3D transform with dynamic shadow. [Video previ
 #### [SPDiffable](https://github.com/ivanvorobei/SPDiffable)
 Simplifies working with animated changes in table and collections. Apple's diffable API required models for each object type. If you want use it in many place, you pass time to implement it and get over duplicates codes. This project help do it elegant with shared models and special cell providers. Support side bar iOS14 and already has native cell providers and views.
 
-## Russian Speaking Community
+## Russian-specking Community
 
 В телеграм-канале [Код Воробья](https://sparrowcode.by/telegram) пишу о iOS разработке и дизайне. Туториалы выклыдываю на [YouTube](https://sparrowcode.by/youtube):
 
