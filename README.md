@@ -120,11 +120,11 @@ Also you can customise distortion of perspective. Using this:
 animationConfig.distortionPerspective = 600
 ```
 
-Both properties allow you configure transform for your view. If you don't know which values shoud using, check [exmple app](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov). With sliders you can customize it in detail.
+Both properties allow you configure transform for your view. If you don't know which values shoud using, check use example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)). With sliders you can customize it in detail.
 
 ### Shadow
 
-Shadow also using configuration. Static and animation configs contains shadow property. For visual transform use [exmple app](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov), with it you get fine values. 
+Shadow also using configuration. Static and animation configs contains shadow property.
 
 #### Blur, Opacity & Color
 
@@ -149,7 +149,7 @@ animationConfig.shadowConfig?.maximumVerticalOffset = 21
 animationConfig.shadowConfig?.maximumHorizontalOffset = 12
 ```
 
-For get fine result, you shoud use this rule: `startVerticalOffset` < `cornerVerticalOffset` < `maximumVerticalOffset`. 
+For get fine result, you shoud use this rule: `startVerticalOffset` < `cornerVerticalOffset` < `maximumVerticalOffset`. Visual transform available in example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)), with it you get fine values. 
 
 ## Other Projects
 
