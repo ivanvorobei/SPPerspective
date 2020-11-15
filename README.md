@@ -3,10 +3,8 @@
 <a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
 <img 
 align="left" 
-src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%20Preview.png" width="430"/>
+src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%20Preview.png" width="440"/>
 </a>
-
-### About
 
 Animatable widgets from iOS 14. Same animation for transform and shadow. 
 
