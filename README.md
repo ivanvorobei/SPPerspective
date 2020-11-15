@@ -24,7 +24,7 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
     - [CocoaPods](#cocoapods)
     - [Manually](#manually)
 - [Quick Start](#quick-start)
-- [Customise](#usage)
+- [Customise](#customise)
     - [Duration](#duration)
     - [Perspective](#perspective)
     - [Shadow](#shadow)
@@ -75,13 +75,19 @@ view.applyPerspective(.iOS14WidgetStatic)
 
 ## Customise
 
+### Summary
+
 <a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
 <img 
 align="left" 
 src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="300"/>
 </a>
 
-You can customise duration, angle, shadow properties and other. All this customising by configuration file. Configuration can be animatable or static. Above you see  `.iOS14WidgetAnimatable` & `.iOS14WidgetStatic`, its also configurations wich already have good-usage values same as native widgets. Here more details about customise.
+You can customise duration, angle, shadow properties and other. All this customising by configuration file. Configuration can be animatable or static. Above you see  `.iOS14WidgetAnimatable` & `.iOS14WidgetStatic`, its also configurations wich already have good-usage values same as native widgets. 
+
+For get fine configuration, better use example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)). You can in real time see changes in configuration.
+
+Next more details about customise.
 
 ### Duration
 
@@ -152,9 +158,6 @@ Using for request and check state of permissions. Available native UI for reques
 
 #### [SPAlert](https://github.com/ivanvorobei/SPAlert)
 You can find this alerts in AppStore after feedback or after added song to library in Apple Music. Contains popular Done, Heart presets and many other. Done preset present with draw path animation like original. Also available simple present message without icon. Usage in one line code.
-
-#### [SPPerspective](https://github.com/ivanvorobei/SPPerspective)
-Animation of widgets from iOS 14. 3D transform with dynamic shadow. [Video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov). Available deep customisation 3D and shadow. Also you can use static transform without animation.
 
 #### [SPDiffable](https://github.com/ivanvorobei/SPDiffable)
 Simplifies working with animated changes in table and collections. Apple's diffable API required models for each object type. If you want use it in many place, you pass time to implement it and get over duplicates codes. This project help do it elegant with shared models and special cell providers. Support side bar iOS14 and already has native cell providers and views.
