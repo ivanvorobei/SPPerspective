@@ -87,6 +87,8 @@ You can customise duration, angle, shadow properties and other. All this customi
 
 For get fine configuration, better use example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)). You can in real time see changes in configuration.
 
+[![https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)](https://github.com/ivanvorobei)
+
 Next more details about customise.
 
 ### Duration
