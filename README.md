@@ -25,11 +25,9 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
     - [Manually](#manually)
 - [Quick Start](#quick-start)
 - [Customise](#usage)
-    - [Configs](#)
-    - [Duration](#)
-    - [Perspective](#)
-    - [Rotation](#)
-    - [Shadow](#)
+    - [Duration](#duration)
+    - [Perspective](#perspective)
+    - [Shadow](#shadow)
 - [Other Projects](#other-projects)
 - [Russian-specking Community](#russian-specking-community)
 
@@ -63,7 +61,17 @@ If you prefer not to use any of dependency managers, you can integrate `SPPerspe
 
 ## Quick Start
 
-TODO: Add usage configuration, update navigation on top. Here add video preview from youtube and link to it
+For apply animation for your view, use this code: 
+
+```swift
+view.applyPerspective(.iOS14WidgetAnimatable)
+````
+
+Use this, if need apply non-animation transform:
+
+```swift
+view.applyPerspective(.iOS14WidgetStatic)
+```
 
 ## Customise
 
@@ -73,7 +81,69 @@ align="left"
 src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="300"/>
 </a>
 
-Here usage details.
+You can customise duration, angle, shadow properties and other. All this customising by configuration file. Configuration can be animatable or static. Above you see  `.iOS14WidgetAnimatable` & `.iOS14WidgetStatic`, its also configurations wich already have good-usage values same as native widgets. Here more details about customise.
+
+### Duration
+
+When you init new animation configuration, you can set duration:
+
+```
+let animationConfig = SPPerspectiveAnimationConfig(duration: 16, distortion: 600, angle: 10, vectorStep: 3.14, shadow: nil)
+view.applyPerspective(animationConfig)
+```
+
+If need change duration for default config, using this:
+
+```swif
+let animationConfig = SPPerspectiveConfig.iOS14WidgetAnimatable
+animationConfig.animationDuration = 8
+view.applyPerspective(animationConfig)
+```
+
+### Perspective
+
+Angle is how much the view will rotate. For change it call `angle` in config:
+
+```swift
+animationConfig.angle = 10
+```
+
+Also you can customise distortion of perspective. Using this:
+
+```swift
+animationConfig.distortionPerspective = 600
+```
+
+Both properties allow you configure transform for your view. If you don't know which values shoud using, check [exmple app](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov). With sliders you can customize it in detail.
+
+### Shadow
+
+Shadow also using configuration. Static and animation configs contains shadow property. For visual transform use [exmple app](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov), with it you get fine values. 
+
+#### Blur, Opacity & Color
+
+It simple. For change blur, opacity and color call this in configuration.
+
+```swift
+animationConfig.shadowConfig?.blurRadius = 5
+animationConfig.shadowConfig?.opacity = 0.3
+animationConfig.shadowConfig?.color = .black
+```
+
+#### Translations
+
+Translation help customise position of shadow for any state of transform. For example you can want do more vertical translation for show deep transform.
+
+Transform adaptive for each higlight corner. For example `startVerticalOffset` using when highlight top-center side. For bottom corners available `cornerVerticalOffset`. For bottom-center side shoud change `maximumVerticalOffset` . Horizontal trnalation customising by `maximumHorizontalOffset`. 
+
+```swift
+animationConfig.shadowConfig?.startVerticalOffset = 8
+animationConfig.shadowConfig?.cornerVerticalOffset = 18
+animationConfig.shadowConfig?.maximumVerticalOffset = 21
+animationConfig.shadowConfig?.maximumHorizontalOffset = 12
+```
+
+For get fine result, you shoud use this rule: `startVerticalOffset` < `cornerVerticalOffset` < `maximumVerticalOffset`. 
 
 ## Other Projects
 
