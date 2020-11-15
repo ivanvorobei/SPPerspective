@@ -10,7 +10,9 @@ src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%
 
 Animatable widgets from iOS 14. Same animation for transform and shadow. 
 
-You can customise it and duration, shadow translation and perspective angle also. For visual edit better use [example application](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov).
+You can customise duration, perspective angle & shadow also. For visual edit better use example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)).
+
+[![https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov](https://github.com/ivanvorobei/Assets/blob/master/Buttons/video-preview.svg)](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
@@ -95,14 +97,14 @@ Next more details about customise.
 
 When you init new animation configuration, you can set duration:
 
-```
+```swift
 let animationConfig = SPPerspectiveAnimationConfig(duration: 16, distortion: 600, angle: 10, vectorStep: 3.14, shadow: nil)
 view.applyPerspective(animationConfig)
 ```
 
 If need change duration for default config, using this:
 
-```swif
+```swift
 let animationConfig = SPPerspectiveConfig.iOS14WidgetAnimatable
 animationConfig.animationDuration = 8
 view.applyPerspective(animationConfig)
