@@ -75,13 +75,13 @@ view.applyPerspective(.iOS14WidgetStatic)
 
 ## Customise
 
-### Summary
-
 <a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
 <img 
 align="left" 
 src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="300"/>
 </a>
+
+### Summary
 
 You can customise duration, angle, shadow properties and other. All this customising by configuration file. Configuration can be animatable or static. Above you see  `.iOS14WidgetAnimatable` & `.iOS14WidgetStatic`, its also configurations wich already have good-usage values same as native widgets. 
 
