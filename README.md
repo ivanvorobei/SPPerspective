@@ -10,7 +10,7 @@ src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%
 
 Animatable widgets from iOS 14. Same animation for transform and shadow. 
 
-Customisable duration, perspective and shadow also. For visual edit use example app.
+Customisable duration, perspective and shadow also. For visual edit use example app:
 
 [![https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov](https://github.com/ivanvorobei/Assets/blob/master/Buttons/video-preview.svg)](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)
 
