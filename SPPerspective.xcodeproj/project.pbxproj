@@ -148,7 +148,7 @@
 				F42FB2382529ABBB008E4B10 /* Package.swift */,
 				F42FB23C2529ABBB008E4B10 /* README.md */,
 				F48F91792545741C0093AA3D /* SPPerspective.podspec */,
-				F42FB23D2529ABBB008E4B10 /* Source */,
+				F42FB23D2529ABBB008E4B10 /* Sources */,
 				F42FB2462529ABDC008E4B10 /* Example iOS */,
 				F42FB2452529ABDC008E4B10 /* Products */,
 			);
@@ -162,13 +162,13 @@
 			path = .github;
 			sourceTree = "<group>";
 		};
-		F42FB23D2529ABBB008E4B10 /* Source */ = {
+		F42FB23D2529ABBB008E4B10 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				F42FB23E2529ABBB008E4B10 /* SPPerspective */,
 				F48F915325455B660093AA3D /* Supporting Files */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		F42FB23E2529ABBB008E4B10 /* SPPerspective */ = {
@@ -697,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -773,7 +773,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
