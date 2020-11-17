@@ -10,13 +10,13 @@
 		F4140FBC255142E500EBC77E /* WhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4140FBB255142E500EBC77E /* WhiteView.swift */; };
 		F4140FC12551453D00EBC77E /* ConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4140FC02551453D00EBC77E /* ConfigurationModel.swift */; };
 		F4140FC62551468600EBC77E /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = F4140FC52551468600EBC77E /* SPAlert */; };
+		F42C0D87256457FE00FF4372 /* SparrowKit in Frameworks */ = {isa = PBXBuildFile; productRef = F42C0D86256457FE00FF4372 /* SparrowKit */; };
 		F42FB2482529ABDC008E4B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42FB2472529ABDC008E4B10 /* AppDelegate.swift */; };
 		F42FB2512529ABDD008E4B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2502529ABDD008E4B10 /* Assets.xcassets */; };
 		F42FB2542529ABDD008E4B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42FB2522529ABDD008E4B10 /* LaunchScreen.storyboard */; };
 		F4398D6E255A63E20047093F /* DiffableTableRowSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4398D6D255A63E20047093F /* DiffableTableRowSlider.swift */; };
 		F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B3D5325415250006CCF65 /* ExampleAnimationController.swift */; };
 		F447A675254EA6B200A67317 /* SPDiffable in Frameworks */ = {isa = PBXBuildFile; productRef = F447A674254EA6B200A67317 /* SPDiffable */; };
-		F447A679254EA6BC00A67317 /* SparrowKit in Frameworks */ = {isa = PBXBuildFile; productRef = F447A678254EA6BC00A67317 /* SparrowKit */; };
 		F48956882549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48956872549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift */; };
 		F48956892549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48956872549474100391F8A /* SPPerspectiveConfig+DefaultConfigs.swift */; };
 		F48956902549483300391F8A /* SPPerspectiveStaticConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489568F2549483300391F8A /* SPPerspectiveStaticConfig.swift */; };
@@ -103,10 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42C0D87256457FE00FF4372 /* SparrowKit in Frameworks */,
 				F447A675254EA6B200A67317 /* SPDiffable in Frameworks */,
 				F48F914A25455B240093AA3D /* SPPerspective_iOS.framework in Frameworks */,
 				F4140FC62551468600EBC77E /* SPAlert in Frameworks */,
-				F447A679254EA6BC00A67317 /* SparrowKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +139,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F42C0D85256457FE00FF4372 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F42FB2302529AB86008E4B10 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +158,7 @@
 				F42FB23D2529ABBB008E4B10 /* Sources */,
 				F42FB2462529ABDC008E4B10 /* Example iOS */,
 				F42FB2452529ABDC008E4B10 /* Products */,
+				F42C0D85256457FE00FF4372 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,8 +290,8 @@
 			name = "Example iOS";
 			packageProductDependencies = (
 				F447A674254EA6B200A67317 /* SPDiffable */,
-				F447A678254EA6BC00A67317 /* SparrowKit */,
 				F4140FC52551468600EBC77E /* SPAlert */,
+				F42C0D86256457FE00FF4372 /* SparrowKit */,
 			);
 			productName = Example;
 			productReference = F42FB2442529ABDC008E4B10 /* Example iOS.app */;
@@ -531,6 +539,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -562,6 +571,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.SPPerspective.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -606,6 +616,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -630,6 +641,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.SPPerspective.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -862,15 +874,15 @@
 			package = F4140FC42551468600EBC77E /* XCRemoteSwiftPackageReference "SPAlert" */;
 			productName = SPAlert;
 		};
+		F42C0D86256457FE00FF4372 /* SparrowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F447A677254EA6BC00A67317 /* XCRemoteSwiftPackageReference "SparrowKit" */;
+			productName = SparrowKit;
+		};
 		F447A674254EA6B200A67317 /* SPDiffable */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */;
 			productName = SPDiffable;
-		};
-		F447A678254EA6BC00A67317 /* SparrowKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F447A677254EA6BC00A67317 /* XCRemoteSwiftPackageReference "SparrowKit" */;
-			productName = SparrowKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
