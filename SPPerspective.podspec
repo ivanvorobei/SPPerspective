@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
 
   s.source = { :git => 'https://github.com/ivanvorobei/SPPerspective.git', :tag => s.version }
-  s.source_files = 'Source/SPPerspective/**/*.swift'
+  s.source_files = 'Sources/SPPerspective/**/*.swift'
 
 end
