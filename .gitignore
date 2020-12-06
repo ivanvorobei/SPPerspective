@@ -8,7 +8,6 @@ xcuserdata/
 # Swift Package Manager
 Packages/
 Package.resolved
-*.xcodeproj
 .swiftpm
 
 # Temporary
