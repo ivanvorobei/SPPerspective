@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2020 Ivan Vorobei (varabeis@icloud.com)
+// Copyright © 2020 Ivan Vorobei (hello@ivanvorobei.by)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,8 +26,8 @@ import SparrowKit
 class AppDelegate: SPAppWindowDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let rootController = ExampleAnimationController().wrapToNavigationController(prefersLargeTitles: true)
-        makeKeyAndVisible(rootController)
+        let rootController = ExampleAnimationController().wrapToNavigationController(prefersLargeTitles: false)
+        makeKeyAndVisible(rootController, tint: .systemBlue)
         return true
     }
 }
