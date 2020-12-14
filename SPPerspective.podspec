@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/varabeis/SPPerspective'
   s.license = { :type => "MIT", :file => "LICENSE" }
   
-  s.author = { "Ivan Vorobei" => "hello@ivanvorobei.by" }
+  s.author = { 'Ivan Vorobei' => 'hello@ivanvorobei.by' }
   s.social_media_url = 'https://ivanvorobei.by'
   
   s.swift_version = '5.1'
