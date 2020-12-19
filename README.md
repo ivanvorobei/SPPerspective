@@ -12,7 +12,7 @@ Animatable widgets from iOS 14. Same animation for transform and shadow.
 
 Customisable duration, perspective and shadow also. For visual edit use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)):
 
-[![https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov](https://github.com/varabeis/Readme/blob/main/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-preview)
+[![https://ivanvorobei.by/github/spperspective/video-preview](https://github.com/varabeis/Readme/blob/main/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-preview)
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
@@ -35,7 +35,7 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
 ## Requirements
 
-Ready for use on iOS 12+
+iOS 12+
 
 ## Installation
 
@@ -87,9 +87,9 @@ src="https://github.com/varabeis/SPPerspective/blob/main/Assets/Readme/Example%2
 
 You can customise duration, angle, shadow properties and other. All this customising by configuration file. Configuration can be animatable or static. Above you see  `.iOS14WidgetAnimatable` & `.iOS14WidgetStatic`, its also configurations wich already have good-usage values same as native widgets. 
 
-For get fine configuration, better use example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)). You can in real time see changes in configuration.
+For get fine configuration, better use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)). You can in real time see changes in configuration.
 
-[![https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov](https://github.com/varabeis/Assets/blob/master/Buttons/video-preview.svg)](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)
+[![https://ivanvorobei.by/github/spperspective/video-preview](https://github.com/varabeis/Assets/blob/master/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-previewv)
 
 Next more details about customise.
 
