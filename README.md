@@ -89,7 +89,7 @@ You can customise duration, angle, shadow properties and other. All this customi
 
 For get fine configuration, better use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)). You can in real time see changes in configuration.
 
-[![https://ivanvorobei.by/github/spperspective/video-preview](https://github.com/varabeis/Assets/blob/master/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-previewv)
+[![https://ivanvorobei.by/github/spperspective/video-preview](https://github.com/varabeis/Assets/blob/master/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-preview)
 
 Next more details about customise.
 
