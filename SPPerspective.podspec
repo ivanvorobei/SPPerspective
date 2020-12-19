@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'SPPerspective'
-  s.version = '1.2.2'
+  s.version = '1.2.4'
   s.summary = 'Animatable widgets from iOS 14. 3D transform and dynamic shadow.'
   s.homepage = 'https://github.com/varabeis/SPPerspective'
   s.license = { :type => "MIT", :file => "LICENSE" }

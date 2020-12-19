@@ -10,6 +10,9 @@ Packages/
 Package.resolved
 .swiftpm
 
+# Pods
+Pods/
+
 # Temporary
 SPPerspective - Readme Preview.sketch
 SPPerspective - Hello Animated Preview GIF.psd
