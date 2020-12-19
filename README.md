@@ -1,6 +1,6 @@
 # SPPerspective
 
-<a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
+<a href="https://ivanvorobei.by/github/spperspective/video-preview">
 <img 
 align="left" 
 src="https://github.com/varabeis/SPPerspective/blob/main/Assets/Readme/Hello%20Animated%20Preview.gif" width="350"/>
@@ -10,13 +10,13 @@ src="https://github.com/varabeis/SPPerspective/blob/main/Assets/Readme/Hello%20A
 
 Animatable widgets from iOS 14. Same animation for transform and shadow. 
 
-Customisable duration, perspective and shadow also. For visual edit use example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)):
+Customisable duration, perspective and shadow also. For visual edit use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)):
 
-[![https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov](https://github.com/varabeis/Assets/blob/master/Buttons/video-preview.svg)](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)
+[![https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov](https://github.com/varabeis/Readme/blob/main/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-preview)
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
-[![https://github.com/varabeis](https://github.com/varabeis/Assets/blob/master/Buttons/follow-me-on-github.svg)](https://github.com/varabeis)
+[![https://github.com/varabeis](https://github.com/varabeis/Readme/blob/main/Buttons/follow-me-varabeis.svg)](https://github.com/varabeis)
 
 ## Navigate
 
@@ -35,7 +35,7 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
 ## Requirements
 
-Swift `5.1`. Ready for use on iOS 12+
+Ready for use on iOS 12+
 
 ## Installation
 
@@ -59,7 +59,7 @@ pod 'SPPerspective'
 
 ### Manually
 
-If you prefer not to use any of dependency managers, you can integrate `SPPerspective` into your project manually. Put `Source/SPPerspective` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+If you prefer not to use any of dependency managers, you can integrate `SPPerspective` into your project manually. Put `Sources/SPPerspective` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 ## Quick Start
 
@@ -166,8 +166,11 @@ You can find this alerts in AppStore after feedback or after added song to libra
 #### [SPDiffable](https://github.com/varabeis/SPDiffable)
 Simplifies working with animated changes in table and collections. Apple's diffable API required models for each object type. If you want use it in many place, you pass time to implement it and get over duplicates codes. This project help do it elegant with shared models and special cell providers. Support side bar iOS14 and already has native cell providers and views.
 
+#### [SparrowKit](https://github.com/varabeis/SparrowKit)
+Collection of native Swift extensions to boost your development. Support tvOS and watchOS.
+
 ## Russian-specking Community
 
-В телеграм-канале [Код Воробья](https://sparrowcode.by/telegram) пишу о iOS разработке и дизайне. Туториалы выклыдываю на [YouTube](https://sparrowcode.by/youtube):
+В телеграм-канале [Код Воробья](https://ivanvorobei.by/sparrowcode/telegram) пишу о iOS разработке. Видео-туториалы выклыдываю на [YouTube](https://ivanvorobei.by/youtube):
 
-[![Tutorials on YouTube](https://github.com/varabeis/Assets/blob/master/Russian%20Community/youtube-preview.jpg)](https://sparrowcode.by/youtube)
+[![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://ivanvorobei.by/youtube)
