@@ -77,7 +77,7 @@ view.applyPerspective(.iOS14WidgetStatic)
 
 ## Customise
 
-<a href="https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov">
+<a href="https://ivanvorobei.by/github/spperspective/video-preview">
 <img 
 align="left" 
 src="https://github.com/varabeis/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="300"/>
@@ -153,7 +153,7 @@ animationConfig.shadowConfig?.maximumVerticalOffset = 21
 animationConfig.shadowConfig?.maximumHorizontalOffset = 12
 ```
 
-For get fine result, you shoud use this rule: `startVerticalOffset` < `cornerVerticalOffset` < `maximumVerticalOffset`. Visual transform available in example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)), with it you get fine values. 
+For get fine result, you shoud use this rule: `startVerticalOffset` < `cornerVerticalOffset` < `maximumVerticalOffset`. Visual transform available in example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)), with it you get fine values. 
 
 ## Other Projects
 
