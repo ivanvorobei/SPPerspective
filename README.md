@@ -124,7 +124,7 @@ Also you can customise distortion of perspective. Using this:
 animationConfig.distortionPerspective = 600
 ```
 
-Both properties allow you configure transform for your view. If you don't know which values shoud using, check use example app ([video preview](https://cdn.ivanvorobei.by/github/SPPerspective/Preview.mov)). With sliders you can customize it in detail.
+Both properties allow you configure transform for your view. If you don't know which values shoud using, check use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)). With sliders you can customize it in detail.
 
 ### Shadow
 
