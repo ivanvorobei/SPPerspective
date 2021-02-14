@@ -31,7 +31,7 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
     - [Perspective](#perspective)
     - [Shadow](#shadow)
 - [Other Projects](#other-projects)
-- [Russian-specking Community](#russian-specking-community)
+- [Russian Community](#russian-community)
 
 ## Requirements
 
