@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 
   s.name = 'SPPerspective'
-  s.version = '1.2.4'
+  s.version = '1.2.5'
   s.summary = 'Animatable widgets from iOS 14. 3D transform and dynamic shadow.'
-  s.homepage = 'https://github.com/varabeis/SPPerspective'
+  s.homepage = 'https://github.com/ivanvorobei/SPPerspective'
   s.license = { :type => "MIT", :file => "LICENSE" }
   
   s.author = { 'Ivan Vorobei' => 'hello@ivanvorobei.by' }
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5.1'
   s.ios.deployment_target = '12.0'
 
-  s.source = { :git => 'https://github.com/varabeis/SPPerspective.git', :tag => s.version }
+  s.source = { :git => 'https://github.com/ivanvorobei/SPPerspective.git', :tag => s.version }
   s.source_files = 'Sources/SPPerspective/**/*.swift'
 
 end
