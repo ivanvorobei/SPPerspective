@@ -21,10 +21,13 @@
 
 import UIKit
 
+/**
+ SPPerspective: Config for animatable transform.
+ */
 public class SPPerspectiveAnimationConfig: SPPerspectiveConfig {
     
     /**
-     Animation of full cycle of rotation.
+     SPPerspective: Animation of full cycle of rotation.
      
      In widgets iOS 14 using 16 seconds for cycle.
      If you use shadow with it animation,
@@ -33,18 +36,18 @@ public class SPPerspectiveAnimationConfig: SPPerspectiveConfig {
     public var animationDuration: TimeInterval
     
     /**
-     Corner from start animation.
+     SPPerspective: Corner from start animation.
      By default random.
      */
     public var fromCorner: SPPerspectiveHighlightCorner = .random
     
     /**
-     Direction of animation.
+     SPPerspective: Direction of animation.
      */
     public var direction: SPPerspectiveAnimationDirection = .random
     
     /**
-     Create animation config.
+     SPPerspective: Create animation config.
      
      - parameter duration: Duration of animation.
      - parameter distortion: Amount of distortion.

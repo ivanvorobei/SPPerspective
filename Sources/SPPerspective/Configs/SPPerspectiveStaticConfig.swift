@@ -21,16 +21,19 @@
 
 import UIKit
 
+/**
+ SPPerspective: Config for static transform.
+ */
 public class SPPerspectiveStaticConfig: SPPerspectiveConfig {
     
     /**
-     Corner which higlight with launch.
+     SPPerspective: Corner which higlight with launch.
      By default random.
      */
     public var corner: SPPerspectiveHighlightCorner = .random
     
     /**
-     Create animation config.
+     SPPerspective: Create animation config.
      
      - parameter corner: Higlight corner.
      - parameter distortion: Amount of distortion.

@@ -22,7 +22,7 @@
 import UIKit
 
 /**
- Represent vector for 3D coordinates.
+ SPPerspective: Represent vector for 3D coordinates.
  */
 public struct SPPerspectiveVector {
     
