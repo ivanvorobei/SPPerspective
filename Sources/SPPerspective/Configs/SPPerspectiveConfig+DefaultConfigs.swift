@@ -24,7 +24,7 @@ import UIKit
 public extension SPPerspectiveConfig {
     
     /**
-     Mimicrate iOS 14 widget animatable tranform config.
+     SPPerspective: Mimicrate iOS 14 widget animatable tranform config.
      Values can update in future.
      */
     static var iOS14WidgetAnimatable: SPPerspectiveAnimationConfig {
@@ -47,7 +47,7 @@ public extension SPPerspectiveConfig {
     }
     
     /**
-     Mimicarte iOS 14 widget static tranfrom config.
+     SPPerspective: Mimicarte iOS 14 widget static tranfrom config.
      Values can update in future.
      */
     static var iOS14WidgetStatic: SPPerspectiveStaticConfig {

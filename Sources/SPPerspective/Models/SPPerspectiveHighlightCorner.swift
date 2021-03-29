@@ -22,7 +22,7 @@
 import UIKit
 
 /**
-Highlight some side or corner.
+SPPerspective: Highlight some side or corner.
  */
 public enum SPPerspectiveHighlightCorner: String, CaseIterable {
     

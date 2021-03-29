@@ -24,7 +24,7 @@ import UIKit
 public class SPPerspectiveConfig {
     
     /**
-     Distortion if perspective when rotation view.
+     SPPerspective: Distortion if perspective when rotation view.
      
      Using for show 3D effect,
      but with large values get bad results.
@@ -37,7 +37,7 @@ public class SPPerspectiveConfig {
     public var distortionPerspective: CGFloat
     
     /**
-     Angle of rotation. Passing value in degress, not radians.
+     SPPerspective: Angle of rotation. Passing value in degress, not radians.
      
      In iOS 14 widgets using similar to 10 degress.
      Not same as distortion.
@@ -45,7 +45,7 @@ public class SPPerspectiveConfig {
     public var angle: CGFloat
     
     /**
-     Diffrence between 3D vector states.
+     SPPerspective: Diffrence between 3D vector states.
      
      In iOS 14 widgets using similar to 3.14.
      Better leave it and change angle or distortion.
@@ -53,7 +53,7 @@ public class SPPerspectiveConfig {
     public var vectorStep: CGFloat
     
     /**
-     Configuration for shadow.
+     SPPerspective: Configuration for shadow.
      Pass nil if no need doing shadow.
      */
     public var shadowConfig: SPPerspectiveShadowConfig?

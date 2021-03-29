@@ -22,22 +22,22 @@
 import UIKit
 
 /**
- Represent animation direction like clockwise or reversed.
+ SPPerspective: Represent animation direction like clockwise or reversed.
  */
 public enum SPPerspectiveAnimationDirection: CaseIterable {
     
     /**
-     Using like clockwise.
+     SPPerspective: Using like clockwise.
      */
     case forward
     
     /**
-     Using loke reversed clockwise.
+     SPPerspective: Using loke reversed clockwise.
      */
     case reverse
     
     /**
-     Get random side or corner.
+     SPPerspective: Get random side or corner.
      */
     static var random: SPPerspectiveAnimationDirection {
         return allCases.randomElement()!

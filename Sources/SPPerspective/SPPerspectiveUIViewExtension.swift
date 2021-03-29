@@ -24,7 +24,7 @@ import UIKit
 public extension UIView {
     
     /**
-     Apply perspective by config.
+     SPPerspective: Apply perspective by config.
      
      - parameter config: Static or animatable config of perspective.
      */
@@ -40,7 +40,7 @@ public extension UIView {
     }
     
     /**
-     Reset perspective configuration like transofrm and shadow.
+     SPPerspective: Reset perspective configuration like transofrm and shadow.
      
      Always calling before apply new configuration - static or animatable.
      */
@@ -55,7 +55,7 @@ public extension UIView {
     }
     
     /**
-     Apply static perspective config.
+     SPPerspective: Apply static perspective config.
      
      - parameter config: Static config of perspective.
      */
@@ -82,7 +82,7 @@ public extension UIView {
     fileprivate var animationShadowKey : String { return "SPPerspective - Shadow" }
     
     /**
-     Apply animatable perspective config.
+     SPPerspective: Apply animatable perspective config.
      
      - parameter config: Animation config of perspective.
      */
@@ -160,7 +160,7 @@ public extension UIView {
     // MARK: - Makers
     
     /**
-     Create tranform by `corner`, distortion
+     SPPerspective: Create tranform by `corner`, distortion
      angle in degres and vector values.
      
      - parameter corner: Highlight corner.
@@ -174,7 +174,7 @@ public extension UIView {
     }
     
     /**
-     Create tranform by distortion,
+     SPPerspective: Create tranform by distortion,
      angle in degres and vector values.
      
      - parameter distortion: Distortion of perspective.
@@ -192,7 +192,7 @@ public extension UIView {
     }
     
     /**
-     Create vector for trnaform by `corner`.
+     SPPerspective: Create vector for trnaform by `corner`.
      Step is value of range between steps.
      
      - parameter corner: Highlight corner.
@@ -212,7 +212,7 @@ public extension UIView {
     }
     
     /**
-     Create offset shadow size for specific corner.
+     SPPerspective: Create offset shadow size for specific corner.
      Config need for get trnslation values.
      
      - parameter corner: Highlight corner.
