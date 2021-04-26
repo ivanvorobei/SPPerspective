@@ -45,7 +45,7 @@ public enum SPPerspectiveHighlightCorner: String, CaseIterable {
     }
     
     /**
-     Ordered by clockwise or reverse.
+     SPPerspective: Ordered by clockwise or reverse.
      
      - parameter corner: Animation will start from its corner. If nil using default value.
      - parameter direction: Direction of animation.
