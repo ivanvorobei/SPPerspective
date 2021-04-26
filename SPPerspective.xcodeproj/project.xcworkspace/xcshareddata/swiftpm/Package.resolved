@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SPAlert",
+        "repositoryURL": "https://github.com/ivanvorobei/SPAlert",
+        "state": {
+          "branch": "master",
+          "revision": "a4d947a328594f46fea04d0793146cc9b85c32e1",
+          "version": null
+        }
+      },
+      {
+        "package": "SparrowKit",
+        "repositoryURL": "https://github.com/ivanvorobei/SparrowKit",
+        "state": {
+          "branch": "master",
+          "revision": "10b9f0a956e9340a02be5e45f6dedaff5930e0b7",
+          "version": null
+        }
+      },
+      {
+        "package": "SPDiffable",
+        "repositoryURL": "https://github.com/ivanvorobei/SPDiffable",
+        "state": {
+          "branch": "master",
+          "revision": "12f6e66544072cde24968ea99567e6e0bfe7a9ff",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
