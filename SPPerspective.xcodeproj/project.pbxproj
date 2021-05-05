@@ -96,6 +96,7 @@
 		F49896ED2557E73100E70D1C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F4D388BB254C089F003B93DE /* SPPerspectiveAnimationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPerspectiveAnimationDirection.swift; sourceTree = "<group>"; };
 		F4D83C2725591BC500097F51 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		F4D91BBE26426DE400DC33CE /* CODESTYLE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODESTYLE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +155,7 @@
 				F42FB2372529ABBB008E4B10 /* LICENSE */,
 				F42FB2382529ABBB008E4B10 /* Package.swift */,
 				F42FB23C2529ABBB008E4B10 /* README.md */,
+				F4D91BBE26426DE400DC33CE /* CODESTYLE.md */,
 				F48F91792545741C0093AA3D /* SPPerspective.podspec */,
 				F42FB23D2529ABBB008E4B10 /* Sources */,
 				F42FB2462529ABDC008E4B10 /* Example iOS */,
