@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F42FB2432529ABDC008E4B10"
-               BuildableName = "Example iOS.app"
-               BlueprintName = "Example iOS"
+               BuildableName = "iOS Example.app"
+               BlueprintName = "iOS Example"
                ReferencedContainer = "container:SPPerspective.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F42FB2432529ABDC008E4B10"
-            BuildableName = "Example iOS.app"
-            BlueprintName = "Example iOS"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
             ReferencedContainer = "container:SPPerspective.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F42FB2432529ABDC008E4B10"
-            BuildableName = "Example iOS.app"
-            BlueprintName = "Example iOS"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
             ReferencedContainer = "container:SPPerspective.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

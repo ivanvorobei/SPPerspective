@@ -8,9 +8,19 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-        .library(name: "SPPerspective", targets: ["SPPerspective"]),
+        .library(
+            name: "SPPerspective",
+            targets: ["SPPerspective"]
+        ),
     ],
+    dependencies: [],
     targets: [
-        .target(name: "SPPerspective", dependencies: [])
-    ]
+        .target(
+            name: "SPPerspective",
+            swiftSettings: [
+                .define("SPPERSPECTIVE_SPM")
+            ]
+        )
+    ],
+    swiftLanguageVersions: [.v5]
 )
