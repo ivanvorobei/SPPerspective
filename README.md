@@ -3,7 +3,7 @@
 <a href="https://ivanvorobei.by/github/spperspective/video-preview">
 <img 
 align="left" 
-src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Hello%20Animated%20Preview.gif" width="350"/>
+src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/animated-preview.gif" width="350"/>
 </a>
 
 ### About
@@ -20,7 +20,6 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
 ## Navigate
 
-- [Requirements](#requirements)
 - [Installation](#installation)
     - [Swift Package Manager](#swift-package-manager)
     - [CocoaPods](#cocoapods)
@@ -33,11 +32,9 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
 - [Other Projects](#other-projects)
 - [Russian Community](#russian-community)
 
-## Requirements
-
-iOS 12+
-
 ## Installation
+
+Ready for use on iOS 12+. Works with Swift 5+. Required Xcode 12.5 and higher.
 
 ### Swift Package Manager
 
@@ -80,7 +77,7 @@ view.applyPerspective(.iOS14WidgetStatic)
 <a href="https://ivanvorobei.by/github/spperspective/video-preview">
 <img 
 align="left" 
-src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/Example%20App%20Preview.png" width="300"/>
+src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/example-app-preview.png" width="300"/>
 </a>
 
 ### Summary
@@ -172,7 +169,6 @@ Collection of native Swift extensions to boost your development. Support tvOS an
 ## Russian Community
 
 В телеграм-канале [Код Воробья](https://sparrowcode.by/telegram) пишу о iOS разработке. Помощь можно найти в [нашем чате](https://sparrowcode.by/telegram/chat).
-
 Видео-туториалы выклыдываю на [YouTube](https://sparrowcode.by/youtube):
 
 [![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://sparrowcode.by/youtube)

@@ -23,6 +23,7 @@ import UIKit
 import SparrowKit
 import SPAlert
 import SPDiffable
+import SPPerspective
 
 class ExampleAnimationController: SPDiffableTableController {
     

@@ -2,6 +2,8 @@
 .DS_Store
 .Trashes
 
-# Temporary
-SPPerspective - Readme Preview.sketch
-SPPerspective - Hello Animated Preview GIF.psd
+# Swift Package Manager
+.swiftpm
+
+# Stock Sources
+/Assets/Stock/
