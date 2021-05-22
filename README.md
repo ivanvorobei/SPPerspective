@@ -36,6 +36,8 @@ If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
 Ready for use on iOS 12+. Works with Swift 5+. Required Xcode 12.5 and higher.
 
+<img align="right" src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/spm-install-preview.png" width="520"/>
+
 ### Swift Package Manager
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
