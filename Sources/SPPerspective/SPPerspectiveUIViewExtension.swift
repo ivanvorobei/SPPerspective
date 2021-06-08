@@ -124,6 +124,10 @@ public extension UIView {
         
         layer.add(transformAnimation, forKey: animationTransformKey)
         
+        // Requesrid for remove cut bug.
+        // Shoud be maximum.
+        layer.zPosition = 999
+        
         // Process shadow
         
         guard let shadowConfig = config.shadowConfig else { return }
