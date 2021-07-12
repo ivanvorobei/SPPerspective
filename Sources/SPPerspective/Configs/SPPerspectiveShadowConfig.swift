@@ -75,8 +75,9 @@ public struct SPPerspectiveShadowConfig {
     }
 
     /**
-    Create a new SPPerspectiveShadowConfig
-    - parameter blurRadius: Blur radius of the shadow
+     SPPerspective: Create a new SPPerspectiveShadowConfig.
+     
+     - parameter blurRadius: Blur radius of the shadow
      - parameter opacity: Shadow opacity
      - parameter color: Shadow color
      - parameter maximumHorizontalOffset: Maximum value for horizontal shadow offset
