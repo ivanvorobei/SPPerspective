@@ -73,4 +73,24 @@ public struct SPPerspectiveShadowConfig {
     public var startCornerVerticalMedian: CGFloat {
         return cornerVerticalOffset - (cornerVerticalOffset - startVerticalOffset) / 2
     }
+
+    /**
+    Create a new SPPerspectiveShadowConfig
+    - parameter blurRadius: Blur radius of the shadow
+     - parameter opacity: Shadow opacity
+     - parameter color: Shadow color
+     - parameter maximumHorizontalOffset: Maximum value for horizontal shadow offset
+     - parameter startVerticalOffset: Initial vertical offset
+     - parameter cornerVerticalOffset: Vertical offset for side (should be smaller than `maximumHorizontalOffset`
+     - parameter maximumVerticalOffset: Maximum value for vertical offset when card is up side down
+    */
+    public init(blurRadius: CGFloat, opacity: CGFloat, color: UIColor, maximumHorizontalOffset: CGFloat, startVerticalOffset: CGFloat, cornerVerticalOffset: CGFloat, maximumVerticalOffset: CGFloat) {
+        self.blurRadius = blurRadius
+        self.opacity = opacity
+        self.color = color
+        self.maximumHorizontalOffset = maximumHorizontalOffset
+        self.startVerticalOffset = startVerticalOffset
+        self.cornerVerticalOffset = cornerVerticalOffset
+        self.maximumVerticalOffset = maximumVerticalOffset
+    }
 }
