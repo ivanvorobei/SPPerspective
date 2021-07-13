@@ -1,6 +1,6 @@
 # SPPerspective
 
-<a href="https://ivanvorobei.by/github/spperspective/video-preview">
+<a href="https://opensource.ivanvorobei.by/spperspective/preview">
 <img 
 align="left" 
 src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/animated-preview.gif" width="350"/>
@@ -10,13 +10,21 @@ src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/animat
 
 Animatable widgets from iOS 14. Same animation for transform and shadow. 
 
-Customisable duration, perspective and shadow also. For visual edit use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)):
+Customisable duration, perspective and shadow also. For visual edit use example app ([video preview](https://opensource.ivanvorobei.by/spperspective/preview)):
 
-[![https://ivanvorobei.by/github/spperspective/video-preview](https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-preview)
+[![https://opensource.ivanvorobei.by/spperspective/preview](https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg)](https://opensource.ivanvorobei.by/spperspective/preview)
 
 If you like the project, don't forget to `put star ★` and follow me on GitHub:
 
-[![https://github.com/ivanvorobei](https://github.com/ivanvorobei/Readme/blob/main/Buttons/follow-me-ivanvorobei.svg)](https://github.com/ivanvorobei)
+
+<p float="left">
+    <a href="https://github.com/ivanvorobei">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/follow-me-ivanvorobei.svg">
+    </a>
+    <a href="https://opensource.ivanvorobei.by">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
+    </a>
+</p>
 
 ## Navigate
 
@@ -76,7 +84,7 @@ view.applyPerspective(.iOS14WidgetStatic)
 
 ## Customise
 
-<a href="https://ivanvorobei.by/github/spperspective/video-preview">
+<a href="https://opensource.ivanvorobei.by/spperspective/preview">
 <img 
 align="left" 
 src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/example-app-preview.png" width="300"/>
@@ -86,9 +94,9 @@ src="https://github.com/ivanvorobei/SPPerspective/blob/main/Assets/Readme/exampl
 
 You can customise duration, angle, shadow properties and other. All this customising by configuration file. Configuration can be animatable or static. Above you see  `.iOS14WidgetAnimatable` & `.iOS14WidgetStatic`, its also configurations wich already have good-usage values same as native widgets. 
 
-For get fine configuration, better use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)). You can in real time see changes in configuration.
+For get fine configuration, better use example app ([video preview](https://opensource.ivanvorobei.by/spperspective/preview)). You can in real time see changes in configuration.
 
-[![https://ivanvorobei.by/github/spperspective/video-preview](https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg)](https://ivanvorobei.by/github/spperspective/video-preview)
+[![https://opensource.ivanvorobei.by/spperspective/preview](https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg)](https://opensource.ivanvorobei.by/spperspective/preview)
 
 Next more details about customise.
 
@@ -123,7 +131,7 @@ Also you can customise distortion of perspective. Using this:
 animationConfig.distortionPerspective = 600
 ```
 
-Both properties allow you configure transform for your view. If you don't know which values shoud using, check use example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)). With sliders you can customize it in detail.
+Both properties allow you configure transform for your view. If you don't know which values shoud using, check use example app ([video preview](https://opensource.ivanvorobei.by/spperspective/preview)). With sliders you can customize it in detail.
 
 ### Shadow
 
@@ -152,28 +160,35 @@ animationConfig.shadowConfig?.maximumVerticalOffset = 21
 animationConfig.shadowConfig?.maximumHorizontalOffset = 12
 ```
 
-For get fine result, you shoud use this rule: `startVerticalOffset` < `cornerVerticalOffset` < `maximumVerticalOffset`. Visual transform available in example app ([video preview](https://ivanvorobei.by/github/spperspective/video-preview)), with it you get fine values. 
+For get fine result, you shoud use this rule: `startVerticalOffset` < `cornerVerticalOffset` < `maximumVerticalOffset`. Visual transform available in example app ([video preview](https://opensource.ivanvorobei.by/spperspective/preview)), with it you get fine values. 
 
 ## Other Projects
 
-#### [SPPermissions](https://github.com/ivanvorobei/SPPermissions)
-Using for request and check state of permissions. Available native UI for request multiple permissions at the same time. Simple integration and usage like 2 lines code.
+I love being helpful. Here I have provided a list of libraries that I keep up to date. For see `video previews` of libraries without install open [opensource.ivanvorobei.by](https://opensource.ivanvorobei.by) website.<br>
+I have libraries with native interface and managing permissions. Also available pack of useful extensions for boost your development process.
 
-#### [SPAlert](https://github.com/ivanvorobei/SPAlert)
-You can find this alerts in AppStore after feedback or after added song to library in Apple Music. Contains popular Done, Heart presets and many other. Done preset present with draw path animation like original. Also available simple present message without icon. Usage in one line code.
-
-#### [SPDiffable](https://github.com/ivanvorobei/SPDiffable)
-Simplifies working with animated changes in table and collections. Apple's diffable API required models for each object type. If you want use it in many place, you pass time to implement it and get over duplicates codes. This project help do it elegant with shared models and special cell providers. Support side bar iOS14 and already has native cell providers and views.
-
-#### [SparrowKit](https://github.com/ivanvorobei/SparrowKit)
-Collection of native Swift extensions to boost your development. Support tvOS and watchOS.
-
-#### [SPIndicator](https://github.com/ivanvorobei/SPIndicator)
-Floating indicator, mimicrate to indicator which appear when silent mode turn on / off. Support large texts and has ready-use animatable icons like `done` and `error`.
+<p float="left">
+    <a href="https://opensource.ivanvorobei.by">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
+    </a>
+</p>
 
 ## Russian Community
 
-В телеграм-канале [Код Воробья](https://sparrowcode.by/telegram) пишу о iOS разработке. Помощь можно найти в [нашем чате](https://sparrowcode.by/telegram/chat).
+Веду каналы об iOS разработке. Один с туториалами и новостями, другой с обзором библиотек. Со сложной задачей помогут в чате.
+
+<p float="left">
+    <a href="https://sparrowcode.by/telegram/channel">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-tutorials.svg">
+    </a>
+    <a href="https://sparrowcode.by/telegram/libs">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-libraries.svg">
+    </a>
+    <a href="https://sparrowcode.by/telegram/chat">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-chat.svg">
+    </a>
+</p>
+
 Видео-туториалы выклыдываю на [YouTube](https://sparrowcode.by/youtube):
 
 [![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://sparrowcode.by/youtube)
