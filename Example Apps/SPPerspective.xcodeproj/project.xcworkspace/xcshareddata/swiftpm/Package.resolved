@@ -5,8 +5,8 @@
         "package": "SPAlert",
         "repositoryURL": "https://github.com/ivanvorobei/SPAlert",
         "state": {
-          "branch": "master",
-          "revision": "a4d947a328594f46fea04d0793146cc9b85c32e1",
+          "branch": "main",
+          "revision": "5b8befb4ec26b3d598c9df32b2d58810c0e2b5b7",
           "version": null
         }
       },
@@ -14,8 +14,8 @@
         "package": "SparrowKit",
         "repositoryURL": "https://github.com/ivanvorobei/SparrowKit",
         "state": {
-          "branch": "master",
-          "revision": "10b9f0a956e9340a02be5e45f6dedaff5930e0b7",
+          "branch": "main",
+          "revision": "d1a2d489417f98620558da08ddcf44a9d53e58f3",
           "version": null
         }
       },
@@ -23,8 +23,8 @@
         "package": "SPDiffable",
         "repositoryURL": "https://github.com/ivanvorobei/SPDiffable",
         "state": {
-          "branch": "master",
-          "revision": "12f6e66544072cde24968ea99567e6e0bfe7a9ff",
+          "branch": "main",
+          "revision": "884198fb29a339156b824483bc09e2b488d27e28",
           "version": null
         }
       }
