@@ -46,7 +46,7 @@ Ready for use on iOS 12+. Works with Swift 5+. Required Xcode 12.0 and higher.
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-To integrate `SPPerspective` into your Xcode project using Xcode 12, specify it in `File > Swift Packages > Add Package Dependency...`:
+To integrate using Xcode 12, specify it in `File > Swift Packages > Add Package Dependency...`:
 
 ```ogdl
 https://github.com/ivanvorobei/SPPerspective
@@ -54,7 +54,7 @@ https://github.com/ivanvorobei/SPPerspective
 
 ### CocoaPods:
 
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `SPPerspective` into your Xcode project using CocoaPods, specify it in your `Podfile`:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'SPPerspective'
@@ -62,7 +62,7 @@ pod 'SPPerspective'
 
 ### Manually
 
-If you prefer not to use any of dependency managers, you can integrate `SPPerspective` into your project manually. Put `Sources/SPPerspective` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+If you prefer not to use any of dependency managers, you can integrate manually. Put `Sources/ProjectName` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 ## Quick Start
 
@@ -171,8 +171,8 @@ I have libraries with native interface and managing permissions. Also available 
 
 ## Russian Community
 
-Веду каналы об iOS разработке. Один с туториалами и новостями, другой с обзором библиотек.<br>
-Со сложной задачей помогут в чате.
+Подписывайся в телеграмм-канал, если хочешь получать уведомления о новых туториалах.<br>
+Со сложными и непонятными задачами помогут в чате.
 
 <p float="left">
     <a href="https://sparrowcode.by/telegram/channel">
