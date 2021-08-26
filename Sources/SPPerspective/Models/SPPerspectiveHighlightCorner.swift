@@ -19,6 +19,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#if canImport(UIKit) && (os(iOS))
 import UIKit
 
 /**
@@ -71,3 +72,4 @@ public enum SPPerspectiveHighlightCorner: String, CaseIterable {
         return order
     }
 }
+#endif

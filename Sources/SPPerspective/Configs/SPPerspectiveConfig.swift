@@ -19,6 +19,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#if canImport(UIKit) && (os(iOS))
 import UIKit
 
 public class SPPerspectiveConfig {
@@ -65,3 +66,4 @@ public class SPPerspectiveConfig {
         self.shadowConfig = shadow
     }
 }
+#endif

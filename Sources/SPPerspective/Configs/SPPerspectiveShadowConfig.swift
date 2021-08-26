@@ -19,6 +19,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#if canImport(UIKit) && (os(iOS))
 import UIKit
 
 /**
@@ -95,3 +96,4 @@ public struct SPPerspectiveShadowConfig {
         self.maximumVerticalOffset = maximumVerticalOffset
     }
 }
+#endif

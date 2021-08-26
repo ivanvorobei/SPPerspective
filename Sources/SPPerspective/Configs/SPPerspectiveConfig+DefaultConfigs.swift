@@ -19,6 +19,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#if canImport(UIKit) && (os(iOS))
 import UIKit
 
 public extension SPPerspectiveConfig {
@@ -82,3 +83,4 @@ public extension SPPerspectiveConfig {
     fileprivate static var iOS14WidgetShadowMaximumHorizontalOffset: CGFloat { return 12 }
     
 }
+#endif
