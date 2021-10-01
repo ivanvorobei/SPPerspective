@@ -17,9 +17,9 @@
 		F4398D6E255A63E20047093F /* DiffableTableRowSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4398D6D255A63E20047093F /* DiffableTableRowSlider.swift */; };
 		F43B3D5425415250006CCF65 /* ExampleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B3D5325415250006CCF65 /* ExampleAnimationController.swift */; };
 		F447A675254EA6B200A67317 /* SPDiffable in Frameworks */ = {isa = PBXBuildFile; productRef = F447A674254EA6B200A67317 /* SPDiffable */; };
+		F46C34C227072097005681BA /* SPPerspective in Frameworks */ = {isa = PBXBuildFile; productRef = F46C34C127072097005681BA /* SPPerspective */; };
 		F49896EE2557E73100E70D1C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49896ED2557E73100E70D1C /* HeaderView.swift */; };
 		F4D83C2825591BC600097F51 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D83C2725591BC500097F51 /* SliderTableViewCell.swift */; };
-		F4FA2E732658E0D800CBDD22 /* SPPerspective in Frameworks */ = {isa = PBXBuildFile; productRef = F4FA2E722658E0D800CBDD22 /* SPPerspective */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,9 +45,9 @@
 		F42FB2552529ABDD008E4B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4398D6D255A63E20047093F /* DiffableTableRowSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableRowSlider.swift; sourceTree = "<group>"; };
 		F43B3D5325415250006CCF65 /* ExampleAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAnimationController.swift; sourceTree = "<group>"; };
+		F46C34BF27072086005681BA /* SPPerspective */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPPerspective; path = ..; sourceTree = "<group>"; };
 		F49896ED2557E73100E70D1C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F4D83C2725591BC500097F51 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
-		F4FA2E702658E0D000CBDD22 /* SPPerspective */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPPerspective; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			files = (
 				F42C0D87256457FE00FF4372 /* SparrowKit in Frameworks */,
 				F447A675254EA6B200A67317 /* SPDiffable in Frameworks */,
-				F4FA2E732658E0D800CBDD22 /* SPPerspective in Frameworks */,
+				F46C34C227072097005681BA /* SPPerspective in Frameworks */,
 				F4140FC62551468600EBC77E /* SPAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,9 +87,10 @@
 		F42FB2302529AB86008E4B10 = {
 			isa = PBXGroup;
 			children = (
-				F4FA2E702658E0D000CBDD22 /* SPPerspective */,
+				F46C34BF27072086005681BA /* SPPerspective */,
 				F42FB2462529ABDC008E4B10 /* iOS Example */,
 				F42FB2452529ABDC008E4B10 /* Products */,
+				F46C34C02707208C005681BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +132,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		F46C34C02707208C005681BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,7 +160,7 @@
 				F447A674254EA6B200A67317 /* SPDiffable */,
 				F4140FC52551468600EBC77E /* SPAlert */,
 				F42C0D86256457FE00FF4372 /* SparrowKit */,
-				F4FA2E722658E0D800CBDD22 /* SPPerspective */,
+				F46C34C127072097005681BA /* SPPerspective */,
 			);
 			productName = Example;
 			productReference = F42FB2442529ABDC008E4B10 /* iOS Example.app */;
@@ -514,7 +522,7 @@
 			package = F447A673254EA6B200A67317 /* XCRemoteSwiftPackageReference "SPDiffable" */;
 			productName = SPDiffable;
 		};
-		F4FA2E722658E0D800CBDD22 /* SPPerspective */ = {
+		F46C34C127072097005681BA /* SPPerspective */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SPPerspective;
 		};
