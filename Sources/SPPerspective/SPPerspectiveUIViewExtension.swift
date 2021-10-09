@@ -197,7 +197,7 @@ public extension UIView {
     }
     
     /**
-     SPPerspective: Create vector for trnaform by `corner`.
+     SPPerspective: Create vector for transform by `corner`.
      Step is value of range between steps.
      
      - parameter corner: Highlight corner.
@@ -218,7 +218,7 @@ public extension UIView {
     
     /**
      SPPerspective: Create offset shadow size for specific corner.
-     Config need for get trnslation values.
+     Config need for get translation values.
      
      - parameter corner: Highlight corner.
      - parameter config: Shadow configuration.
