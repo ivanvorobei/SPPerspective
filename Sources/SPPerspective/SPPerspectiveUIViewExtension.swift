@@ -69,6 +69,10 @@ public extension UIView {
         let transform = makeTransform(corner: config.corner, distortion: config.distortionPerspective, angle: config.angle, step: config.vectorStep)
         layer.transform = transform
         
+        // Requesrid for remove cut bug.
+        // Shoud be maximum.
+        layer.zPosition = 999
+        
         // Process shadow
         
         guard let shadowConfig = config.shadowConfig else { return }
