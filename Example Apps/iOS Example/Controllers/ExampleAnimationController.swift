@@ -70,7 +70,7 @@ class ExampleAnimationController: SPDiffableTableController {
                     icon: nil,
                     accessoryType: .none,
                     selectionStyle: .none,
-                    action: { [weak self] (indexPath) in
+                    action: { [weak self] _ , _  in
                         guard let self = self else { return }
                         guard let next = SPPerspectiveHighlightCorner.order(from: self.fromCorner, direction: .forward)[safe: 1] else { return }
                         self.fromCorner = next
